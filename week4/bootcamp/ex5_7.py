@@ -31,7 +31,7 @@ def solve(text):
             cnt = 1
             hld = char
             txt = txt + str(cnt) if cnt > 2 else ...
-            txt += char
+            txt += str(char)
         else:
             txt = txt + char if cnt == 1 else ...
             cnt += 1

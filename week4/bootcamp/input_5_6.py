@@ -10,9 +10,12 @@ def solve(term1, term2):
     Biết điểm số được chọn là điểm số ở lần học sau cùng.
     """
 
-    result = None
+    for sub, scr in term1.items():
+        if not sub in term2:
+            term2[sub] = scr
 
-    return result
+    
+    return None
 
 
 def main():

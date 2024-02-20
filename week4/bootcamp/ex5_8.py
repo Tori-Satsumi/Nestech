@@ -10,9 +10,8 @@ def solve():
 
     Gợi ý: dùng ``chr()``, ``ord()``.
     """
-    result = None
-
-    return result
+    for num in range(33, 54):
+        yield chr(num)
 
 
 def main():

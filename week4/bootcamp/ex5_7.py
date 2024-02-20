@@ -29,12 +29,10 @@ def solve(text):
     for char in text:
         if hld != char:
             hld == char
-            if cnt > 2:
-                txt += str(cnt)
+            txt = txt + str(cnt) if cnt > 2 else ...
             txt += char
         else:
-            if cnt == 1:
-                txt += char
+            txt = txt + char if cnt == 1 else ...
             cnt += 1
             
 

@@ -14,8 +14,7 @@ def solve(term1, term2):
         if not sub in term2:
             term2[sub] = scr
 
-    
-    return None
+    return term2
 
 
 def main():

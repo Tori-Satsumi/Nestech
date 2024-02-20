@@ -10,9 +10,7 @@ def solve():
 
     Gợi ý: dùng ``chr()``, ``ord()``.
     """
-    for num in range(33, 54):
-        yield chr(num)
-    return [()]
+    return [(num, chr(num)) for num in range(33, 54)]
 
 def main():
     for part in solve():

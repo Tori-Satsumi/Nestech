@@ -29,6 +29,8 @@ def solve(text):
     for char in text:
         if hld != char:
             hld == char
+            if cnt > 2:
+                txt += str(cnt)
             txt += char
         else:
             if cnt == 1:

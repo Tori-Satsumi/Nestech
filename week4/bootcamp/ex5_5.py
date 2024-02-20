@@ -28,14 +28,17 @@ def solve(inputfile, N=5):
     result = None
     with open(inputfile, "r") as file:
         room = 0
-        for word in file:
-            word = word.lower()
-            if word[0] == "d":
-                room = N
-            elif word[0] == "h" or word[-2:] == "ng":
+        student_id = 0
+        lst = []
+        for name in file:
+            name = name.lower()
+            if name[0] == "h" or name[-2:] == "ng":
                 room = N + 1
+            else:
+                room = N
+            lst.append((hash(name) % MAGIC_NUMBER, name, 1990, room))
 
-    return result
+        return lst
 
 
 def main():

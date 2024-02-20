@@ -30,10 +30,12 @@ def solve(text):
         if hld != char:
             cnt = 1
             hld = char
-            txt = txt + str(cnt) if cnt > 2 else ...
-            txt += str(char)
+            if cnt > 2:
+                txt += str(cnt) 
+            txt += char
         else:
-            txt = txt + char if cnt == 1 else ...
+            if cnt == 1:
+                txt += char  
             cnt += 1
     
     print(txt)

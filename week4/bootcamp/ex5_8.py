@@ -12,7 +12,7 @@ def solve():
     """
     for num in range(33, 54):
         yield chr(num)
-
+    return [()]
 
 def main():
     for part in solve():

@@ -23,11 +23,10 @@ def solve(text):
     a1b3c2a1c1d4
     abbbccccdddd
     """
-    result = None
+    
 
 
-    return result
-
+    return None
 
 def main():
     print(solve("abbbccccdddd"))

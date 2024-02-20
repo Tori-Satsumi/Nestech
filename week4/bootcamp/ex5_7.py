@@ -37,13 +37,16 @@ def solve(text):
             if cnt == 1:
                 txt += char  
             cnt += 1
-    
+
+    if cnt > 2:
+        txt += str(cnt) 
+
     print(txt)
 
     return None
 
 def main():
-    print(solve("abbbccccdddd"))
+    print(solve("abbbccccddddefffgghhhhhhhhhiiiii"))
 
 
 if __name__ == "__main__":

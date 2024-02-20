@@ -28,14 +28,15 @@ def solve(text):
     txt = ""
     for char in text:
         if hld != char:
-            hld == char
+            cnt = 1
+            hld = char
             txt = txt + str(cnt) if cnt > 2 else ...
             txt += char
         else:
             txt = txt + char if cnt == 1 else ...
             cnt += 1
-            
-
+    
+    print(txt)
 
     return None
 

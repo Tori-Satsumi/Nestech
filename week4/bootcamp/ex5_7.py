@@ -23,7 +23,13 @@ def solve(text):
     a1b3c2a1c1d4
     abbbccccdddd
     """
-    
+    hld = ""
+    cnt = 1
+    for char in text:
+        if hld != char:
+            hld == char
+        else:
+            cnt += 1
 
 
     return None

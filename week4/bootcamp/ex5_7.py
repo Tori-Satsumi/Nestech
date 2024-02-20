@@ -25,11 +25,16 @@ def solve(text):
     """
     hld = ""
     cnt = 1
+    txt = ""
     for char in text:
         if hld != char:
             hld == char
+            txt += char
         else:
+            if cnt <= 2:
+                txt += char
             cnt += 1
+            
 
 
     return None

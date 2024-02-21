@@ -11,10 +11,10 @@ Có bao nhiêu đường như vậy trong ô 10x10?
 Kiểm tra kết quả bằng https://projecteuler.net/problem=15
 """
 
-def fractional(num):
+def factorial(num):
     if num == 1:
         return 1
-    return num * fractional(num - 1)
+    return num * factorial(num - 1)
 
 def solve(input_data=10):
 

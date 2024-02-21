@@ -29,14 +29,16 @@ def solve(N):
       *8******8*
       9********9
     """
-    lst = [str(i) * (N - 1) for i in range(N)]
-    for i, row in enumerate(lst):
-        for ind, char in enumerate(lst[i]):
-            if not(ind == i or ind == (N - 1 - i)):
-                lst[i] = lst[i][:ind] + "*" + lst[i][ind + 1:]
+    lst = [[str(i) for _ in range(N)] for i in range(N)]
+                
 
-    for i in lst:
-        print(i)
+    for _i, row in enumerate(lst):
+        for i, char in enumerate(lst[_i]):
+            if not(_i == i or _i == N - 1 - i):
+                lst[_i][i] = "*"
+
+    for row in lst:
+        print(lst)
 
     return None
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import random
-import string
+from random import choice
+from string import ascii_letters
 
 def solve(N):
     """Creates a string which contains N random ASCII letters.
@@ -14,10 +14,8 @@ def solve(N):
     Must: use list comprehension
     Tips: list comprehension always create new list
     """
-    result = None
 
-
-    return result
+    return [choice(ascii_letters) for _ in range(N)]
 
 
 def main():

@@ -29,10 +29,10 @@ def solve(N):
       *8******8*
       9********9
     """
-    result = None
+    lst = [[i for i in range(N)] for _ in range(N)]
+    print(len(lst))
 
-
-    return result
+    return lst
 
 
 def main():

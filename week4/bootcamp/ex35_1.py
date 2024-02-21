@@ -7,10 +7,7 @@ def solve(N):
     Tips: list comprehension always create new list
     """
 
-    result = None
-
-
-    return result
+    return [2 for _ in range(N)]
 
 
 def main():

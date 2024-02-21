@@ -12,12 +12,12 @@ def solve(N):
     Tips: list comprehension always create new list
     """
 
-
+    return [[i for i in range(_h)] for _h in range(N)]
     return len([[i] for i in range(N) if not (sum([i]) % 3) or not (sum([i]) % 5)])
 
 
 def main():
-    print(solve(1000))
+    print(solve(10))
 
 
 if __name__ == "__main__":

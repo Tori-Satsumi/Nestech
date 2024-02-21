@@ -12,17 +12,15 @@ Kiểm tra kết quả bằng https://projecteuler.net/problem=15
 """
 
 def factorial(num):
-    if num == 1:
-        return 1
-    return num * factorial(num - 1)
+    return 1 if num == 1 else num * factorial(num - 1)
+
 
 def solve(input_data=10):
-
-    return input_data
+    return int(factorial(input_data * 2) / (factorial(input_data) ** 2))
 
 
 def main():
-    print(solve())
+    print(solve(5))
 
 
 if __name__ == "__main__":

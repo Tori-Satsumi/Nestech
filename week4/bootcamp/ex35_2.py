@@ -12,10 +12,8 @@ def solve(N):
     Must: use list comprehension
     Tips: list comprehension always create new list
     """
-    result = None
 
-
-    return result
+    return [random.randint(0, 9) for _ in range(N)]
 
 
 def main():

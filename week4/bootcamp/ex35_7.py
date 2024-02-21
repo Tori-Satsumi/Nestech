@@ -13,8 +13,7 @@ def solve(N):
     """
 
     
-
-    return 
+    return [[i for i in range(_i)] for _i in range(N)]
 
 
 def main():

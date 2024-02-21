@@ -60,11 +60,7 @@ data = [
     {"name": "Thừa Thiên - Huế", "population": 1114500, "area": 5033.2, "senator": 7,},
     {"name": "Tiền Giang", "population": 1692500, "area": 2508.3, "senator": 8,},
     {"name": "Trà Vinh", "population": 1015300, "area": 2341.2, "senator": 6},
-    {"name": "Tuyên Quang",
-        "population": 738900,
-        "area": 5867.3,
-        "senator": 5,
-    },
+    {"name": "Tuyên Quang", "population": 738900, "area": 5867.3, "senator": 5,},
     {"name": "Vĩnh Long", "population": 1033600, "area": 1504.9, "senator": 6},
     {"name": "Vĩnh Phúc", "population": 1020600, "area": 1236.5, "senator": 6},
     {"name": "Yên Bái", "population": 764400, "area": 6886.3, "senator": 7},
@@ -80,7 +76,7 @@ def solve(input_data):
     - Tạo 1 list chứa tên, dân số của các thành phố có dân số trên 1 triệu,
     sắp xếp theo thứ tự giảm dần.
     """
-    result = None
+
 
     return result
 

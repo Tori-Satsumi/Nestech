@@ -11,10 +11,9 @@ def solve(N):
     Must: use list comprehension
     Tips: list comprehension always create new list
     """
-    result = None
 
 
-    return result
+    return None
 
 
 def main():

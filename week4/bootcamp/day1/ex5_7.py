@@ -41,8 +41,6 @@ def solve(text):
     if cnt > 2:
         txt += str(cnt) 
 
-    print(txt)
-
     return None
 
 def main():

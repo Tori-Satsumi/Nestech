@@ -59,7 +59,7 @@ def solve():
                                 for i in range(1,10):
                                     a = - 13 * b / c - d - 12 * e + f + 11 - g * h / i + 10 - 66
                                     if a > 0 and a < 10:
-                                            cnt += 1
+                                        cnt += 1
 
     print(f"time: {time.time() - start} sec")
     return cnt

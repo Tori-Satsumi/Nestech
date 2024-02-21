@@ -21,7 +21,7 @@ def solve():
     f1 = {}
     for b in range(1, 10):
         for c in range(1, 10):
-            fnc1 = str((13 * b) / c)
+            fnc1 = str(float((13 * b) / c))
             f1[fnc1] = f1[fnc1] + 1 if fnc1 in f1 else 1
 
     f2 = {}
@@ -35,7 +35,7 @@ def solve():
     for g in range(1, 10):
         for h in range(1, 10):
             for i in range(1, 10):
-                fnc3 = str(g * h / i)
+                fnc3 = str(float(g * h / i))
                 f3[fnc3] = f3[fnc3] + 1 if fnc3 in f3 else 1
 
     for key1, value1 in f1.items():

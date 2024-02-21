@@ -31,11 +31,10 @@ def solve(N):
     """
     lst = [[f"{i}" * (N - 1)] for i in range(N)]
     for i, row in enumerate(lst):
-        for ind, char in enumerate(lst[i]):
+        for ind, char in enumerate(row):
             if not(ind == i or ind == (N - 1 - i)):
-                lst[i][ind] = "*"
+                row[ind] = "*"
 
-        print(lst[i])
 
     # for i in lst:
     #     print(i)

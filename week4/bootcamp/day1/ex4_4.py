@@ -38,12 +38,12 @@ def solve():
                 fnc3 = str(g * h / i)
                 f3[fnc3] = f3[fnc3] + 1 if fnc3 in f3 else 1
 
-    # for key1, value1 in f1.items():
-    #     for key2, value2 in f2.items():
-    #         for key3, value3 in f3.items():
-    #             a = 87 - (float(key1) + float(key2) + float(key3))
-    #             if  0 < a < 10:
-    #                 cnt += int(value1) * int(value2) * int(value3)
+    for key1, value1 in f1.items():
+        for key2, value2 in f2.items():
+            for key3, value3 in f3.items():
+                a = 87 - (float(key1) + float(key2) + float(key3))
+                if  0 < a < 10:
+                    cnt += int(value1) * int(value2) * int(value3)
 
 
     # 10 sec

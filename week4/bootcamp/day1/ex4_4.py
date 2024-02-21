@@ -16,8 +16,8 @@ def solve():
     cnt = 0
     start = time.time()
 
-    # 4.5s
-    # amount of value: 447_485
+    # 0.5s
+    # amount of value: 3_684_573
     f1 = {}
     for b in range(1, 10):
         for c in range(1, 10):

@@ -77,7 +77,7 @@ def solve(input_data):
     sắp xếp theo thứ tự giảm dần.
     """
 
-    ls1 = [(city["name"], city["population"]) for city in data if city["name"][0].lower() == "h"]
+    ls1 = [(city["name"], city["population"]) for city in sorted(data.items(), key=lambda item: item[1]) if city["name"][0].lower() == "h"]
     print(ls1)
 
     return None

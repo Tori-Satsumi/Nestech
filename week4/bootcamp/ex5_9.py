@@ -77,7 +77,7 @@ def solve(input_data):
     sắp xếp theo thứ tự giảm dần.
     """
 
-    ls1 = [city for city in data ]
+    ls1 = [(city["name"], city["population"]) for city in data ]
     print(ls1)
 
     return None

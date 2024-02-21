@@ -15,7 +15,7 @@ def solve(N):
 
 
 def main():
-    print(solve(10000))
+    print(solve(10))
 
 
 if __name__ == "__main__":

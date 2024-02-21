@@ -11,8 +11,8 @@ def solve(N):
     Must: use list comprehension
     Tips: list comprehension always create new list
     """
-
-    return [ sm := [i for i in range(_i)] for _i in range(N) if not sum(sm) % 3]
+    lst = [[i for i in range(_i)] for _i in range(N)]
+    return len([])
 
     return len([[i] for i in range(N) if not (sum([i]) % 3) or not (sum([i]) % 5)])
 

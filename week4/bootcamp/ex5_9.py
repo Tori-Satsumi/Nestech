@@ -78,10 +78,9 @@ def solve(input_data):
     """
 
     ls1 = sorted([(city["name"], city["population"]) for city in data if city["name"][0].lower() == "h"], key = lambda item: item[0])
-    for i in ls1:
-        print(i)
+    ls2 = [(city["name"], city["population"]) for city in data if city["name"][0].lower() == "h"]
 
-    return None
+    return ls1
 
 
 def main():

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+from operator import mul
 
 def solve(N):
     """
@@ -10,7 +10,7 @@ def solve(N):
     Tips: list comprehension always create new list
     """
 
-    return sum([2 for _ in range(1000)])
+    return mul([2 for _ in range(1000)])
 
 
 def main():

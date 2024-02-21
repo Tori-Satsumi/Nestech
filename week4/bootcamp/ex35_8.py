@@ -37,7 +37,10 @@ def solve(N):
             else:
                 lst[i][ind] = "*"
 
-    return lst
+    for i in lst:
+        print(i)
+
+    return None
 
 
 def main():

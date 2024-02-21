@@ -10,10 +10,7 @@ def solve(N):
     Tips: list comprehension always create new list
     """
 
-    result = None
-
-
-    return result
+    return [f"{i}" * 6 for i in range(1, N + 1) if i % 2]
 
 
 def main():

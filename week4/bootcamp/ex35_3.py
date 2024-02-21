@@ -6,10 +6,8 @@ def solve(N):
     Must: use list comprehension
     Tips: list comprehension always create new list
     """
-    result = None
 
-
-    return result
+    return [i for i in range(1, N + 1) if not i % 2]
 
 
 def main():

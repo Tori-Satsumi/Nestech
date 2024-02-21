@@ -77,7 +77,7 @@ def solve(input_data):
     sắp xếp theo thứ tự giảm dần.
     """
 
-    ls1 = []
+    ls1 = [(name, pop) for name, pop in data]
 
 
     return None

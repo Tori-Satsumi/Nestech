@@ -30,18 +30,13 @@ def solve(N):
       9********9
     """
     lst = [[str(i) for _ in range(N)] for i in range(N)]
-                
-
     for _i, row in enumerate(lst):
         for i, char in enumerate(lst[_i]):
             if not(_i == i or _i == N - 1 - i):
                 lst[_i][i] = "*"
+        lst[_i] = "".join(lst[_i])
 
-    for row in lst:
-        print(lst)
-
-    return None
-
+    return "\n".join(lst)
 
 def main():
     print(solve(10))

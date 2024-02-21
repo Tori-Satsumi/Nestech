@@ -33,10 +33,10 @@ def solve(N):
     for i, row in enumerate(lst):
         for ind, char in enumerate(lst[i]):
             if not(ind == i or ind == (N - 1 - i)):
-                lst[i][ind] = '*'
+                lst[i][ind].replace(char, "*")
 
-    # for i in lst:
-    #     print(i)
+    for i in lst:
+        print(i)
 
     return None
 

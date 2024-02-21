@@ -10,9 +10,7 @@ def solve(N):
     Tips: list comprehension always create new list
     """
 
-
-
-    return result
+    return sum([2 for _ in range(1000)])
 
 
 def main():

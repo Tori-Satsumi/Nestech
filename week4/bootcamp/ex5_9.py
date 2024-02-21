@@ -77,8 +77,10 @@ def solve(input_data):
     sắp xếp theo thứ tự giảm dần.
     """
 
+    ls1 = []
 
-    return result
+
+    return None
 
 
 def main():

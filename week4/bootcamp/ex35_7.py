@@ -12,7 +12,8 @@ def solve(N):
     Tips: list comprehension always create new list
     """
 
-    return [[i for i in range(_h)] for _h in range(N)]
+    return [ sm := [i for i in range(_i)] for _i in range(N) if not sum(sm) % 3]
+
     return len([[i] for i in range(N) if not (sum([i]) % 3) or not (sum([i]) % 5)])
 
 

@@ -12,10 +12,8 @@ def diff_attributes(object1, object2):
 
     Tìm list các "magic" attribute mà chỉ object1 có, object2 không có
     """
-    result = None
 
-
-    return result
+    return [att for att in dir(object1) if not att in dir(object2)]
 
 def solve(input_data):
     result = diff_attributes(*input_data)

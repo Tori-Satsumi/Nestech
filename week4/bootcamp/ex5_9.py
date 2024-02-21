@@ -77,8 +77,8 @@ def solve(input_data):
     sắp xếp theo thứ tự giảm dần.
     """
 
-    ls1 = [(name, pop) for name, pop in data]
-
+    ls1 = [(name, pop) for city in data for name, pop in city.items()]
+    print(ls1)
 
     return None
 

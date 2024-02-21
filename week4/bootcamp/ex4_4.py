@@ -58,7 +58,7 @@ def solve():
                             for g in range(1, 10):
                                 for h in range(1, 10):
                                     for i in range(1, 10):
-                                        if a + 13 * b / c + d + 12 * e - f + g * h / i == 87:
+                                        if (a + 13 * b / c) + (d + 12 * e - f) + (g * h / i) == 87:
                                             cnt += 1
 
     print(f"time: {time.time() - start} sec")

@@ -21,14 +21,14 @@ def solve():
     f1 = {}
     for b in range(1, 10):
         for c in range(1, 10):
-            fnc1 = str(13 * b / c)
+            fnc1 = str((13 * b) / c)
             f1[fnc1] = f1[fnc1] + 1 if fnc1 in f1 else 1
 
     f2 = {}
     for d in range(1, 10):
         for e in range(1, 10):
             for f in range(1, 10):
-                fnc2 = str(d + 12 * e - f)
+                fnc2 = str(d + (12 * e) - f)
                 f2[fnc2] = f2[fnc2] + 1 if fnc2 in f2 else 1
 
     f3 = {}
@@ -38,13 +38,12 @@ def solve():
                 fnc3 = str(g * h / i)
                 f3[fnc3] = f3[fnc3] + 1 if fnc3 in f3 else 1
 
-
-    for key1, value1 in f1.items():
-        for key2, value2 in f2.items():
-            for key3, value3 in f3.items():
-                a = 87 - (float(key1) + float(key2) + float(key3))
-                if  0 < a < 10:
-                    cnt += int(value1) * int(value2) * int(value3)
+    # for key1, value1 in f1.items():
+    #     for key2, value2 in f2.items():
+    #         for key3, value3 in f3.items():
+    #             a = 87 - (float(key1) + float(key2) + float(key3))
+    #             if  0 < a < 10:
+    #                 cnt += int(value1) * int(value2) * int(value3)
 
 
     # 10 sec

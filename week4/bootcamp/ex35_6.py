@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from operator import mul
+from functools import reduce
 
 def solve(N):
     """
@@ -10,8 +11,7 @@ def solve(N):
     Tips: list comprehension always create new list
     """
 
-    return mul([2 for _ in range(1000)])
-
+    return reduce(mul, [2 for _ in range(1000)])
 
 def main():
     print(solve(1000))

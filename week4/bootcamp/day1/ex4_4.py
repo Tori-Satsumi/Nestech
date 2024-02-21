@@ -17,7 +17,7 @@ def solve():
     start = time.time()
 
     # 4.5s
-    # amount of value: 447485
+    # amount of value: 447_485
     # f1 = {}
     # for a in range(1, 10):
     #     for b in range(1, 10):
@@ -47,19 +47,19 @@ def solve():
     #                 cnt += int(value1) * int(value2) * int(value3)
 
 
-    # 88 sec
-    # amount of value: 442232
-    for b in range(1,10):
-        for c in range(1,10):
-            for d in range(1,10):
-                for e in range(1,10):
-                    for f in range(1,10):
-                        for g in range(1,10):
-                            for h in range(1,10):
-                                for i in range(1,10):
-                                    a = 66 - (13 * b / c + d + 12 * e - f - 11 + g * h / i - 10)
-                                    if a > 0 and a < 10:
-                                        cnt += 1
+    # 10 sec
+    # amount of value: 3_684_923
+    # for b in range(1,10):
+    #     for c in range(1,10):
+    #         for d in range(1,10):
+    #             for e in range(1,10):
+    #                 for f in range(1,10):
+    #                     for g in range(1,10):
+    #                         for h in range(1,10):
+    #                             for i in range(1,10):
+    #                                 a = 66 - (13 * b / c + d + 12 * e - f - 11 + g * h / i - 10)
+    #                                 if a > 0 and a < 10:
+    #                                     cnt += 1
 
     print(f"time: {time.time() - start} sec")
     return cnt

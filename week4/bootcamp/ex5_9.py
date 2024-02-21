@@ -78,9 +78,9 @@ def solve(input_data):
     """
 
     ls1 = sorted([(city["name"], city["population"]) for city in data if city["name"][0].lower() == "h"], key = lambda item: item[0])
-    ls2 = [(city["name"], city["population"]) for city in data if city["name"][0].lower() == "h"]
+    ls2 = sorted([(city["name"], city["population"]) for city in data if city["population"] > 1_000_000], key= lambda item: item[1], reverse=True)
 
-    return ls1
+    return None
 
 
 def main():

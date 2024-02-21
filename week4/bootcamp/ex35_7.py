@@ -13,7 +13,7 @@ def solve(N):
     """
 
 
-    return None
+    return len([[i] for i in range(N) if not (sum([i]) % 3) or not (sum([i] % 5))])
 
 
 def main():

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # lst = []
-def your_function(iterable, N):
+def split_lst(iterable, N):
     # Sửa tên, set giá trị return
     result = None
 
@@ -19,7 +19,7 @@ def solve(iterable, N):
     # raise NotImplementedError("Bạn chưa làm bài này")
 
     # sửa thành tên function phù hợp
-    result = your_function(iterable, N)
+    result = split_lst(iterable, N)
 
     return result
 

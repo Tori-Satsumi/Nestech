@@ -15,11 +15,7 @@ def calculate_cost(usage, prices):
     Out[1]: True
     """
     # Viết code tính toán vào đây
-    result = None
-
-    return result
-    # pass
-
+    return 50 * prices["first_50"] + 50 * prices["from_51_to_100"] + (usage - 100) * prices["above_100"] if usage > 100 else 50 * prices["first_50"] + (usage - 50) * prices["from_51_to_100"] if usage > 50 else usage * prices["first_50"]
 
 def solve(input_data):
     result = None

@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 
 # lst = []
-def split_lst(iterable, N):
-    # Sửa tên, set giá trị return
-    result = None
-
-    return result
-    # pass
+def divide_ls(iterable, N):
+    # from ex4_9.py func divide_ls
+    return [iterable[_t: _t + N] for _t in range(0, len(iterable), N)]
 
 
 def solve(iterable, N):
@@ -19,7 +16,7 @@ def solve(iterable, N):
     # raise NotImplementedError("Bạn chưa làm bài này")
 
     # sửa thành tên function phù hợp
-    result = split_lst(iterable, N)
+    result = divide_ls(iterable, N)
 
     return result
 

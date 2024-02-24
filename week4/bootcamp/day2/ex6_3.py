@@ -19,7 +19,7 @@ def find_max_price(datafile):
     finally:
         f.close()
 
-    return
+    return None
 
 
 def solve():

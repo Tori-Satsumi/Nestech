@@ -8,18 +8,18 @@ import time
 
 
 def find_max_price(datafile):
-    f = open(datafile)
-    dr = csv.DictReader(f, ["time", "price", "UNKNOWN"])  # NOQA
-    # Viết tiếp code vào đây
+    with open(datafile, "r") as f:
+        dr = csv.DictReader(f, ["time", "price", "UNKNOWN"])  # NOQA
+        # Viết tiếp code vào đây
 
-    try:
-        # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-        # raise NotImplementedError("Bạn chưa làm bài này")
-        pass
-    finally:
-        f.close()
-
-    return None
+        try:
+            # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
+            # raise NotImplementedError("Bạn chưa làm bài này")
+            pass
+        finally:
+            ...
+            
+        return None
 
 
 def solve():

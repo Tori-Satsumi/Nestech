@@ -9,10 +9,10 @@ import time
 
 def find_max_price(datafile):
     with open(datafile, "r") as f:
-        dr = csv.DictReader(f, ["time", "price", "UNKNOWN"])  # NOQA
-
-        for i in dr:
-            print(i)
+        hld = {"time" : None, "Price": 0, "UNKNOWN" : None}
+        for row in csv.DictReader(f, ["time", "price", "UNKNOWN"]): # NOQA
+            if hld["Price"] < row["Price"]:
+                hld = row
 
         try:
             # Xoá dòng sau và viết code vào đây set các giá trị phù hợp

@@ -11,7 +11,7 @@ def find_max_price(datafile):
     with open(datafile, "r") as f:
         dr = csv.DictReader(f, ["time", "price", "UNKNOWN"])  # NOQA
 
-        print(dr)
+        print(dict(dr))
 
         try:
             # Xoá dòng sau và viết code vào đây set các giá trị phù hợp

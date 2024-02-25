@@ -3,7 +3,7 @@
 import csv
 import os
 import time
-import pandas as pd
+import gzip
 
 # bài này khó. làm đc thì làm 
 
@@ -22,9 +22,11 @@ def find_max_price(datafile):
     #     finally:
     #         ...
             
-    data = pd.read_csv('http://api.bitcoincharts.com/v1/csv/')
-    print(data)
-        
+    with gzip.open('http://api.bitcoincharts.com/v1/csv/', 'rt', newline='') as csvfile:
+        reader = csv.reader(csvfile)
+        for row in reader:
+            print(row)
+
     return None
 
 

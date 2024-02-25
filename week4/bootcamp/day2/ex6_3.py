@@ -5,7 +5,7 @@ import os
 import time
 
 def convert(inp):
-    return int(str(inp["price"])[:inp["price"].find("0")]) if inp.find(".") != -1 else int(inp)
+    return int(str(inp["price"])[:inp["price"].find(".")]) if inp.find(".") != -1 else int(inp)
 
 
 def find_max_price(datafile):

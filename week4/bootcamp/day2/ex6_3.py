@@ -5,18 +5,14 @@ import os
 import time
 
 def find_max_price(datafile):
-    with open(datafile, "rb") as f:
-        hld = {"time" : None, "Price": 0, "UNKNOWN" : None}
+    with open(datafile, "r") as f:
+        hld = {"time" : None, "price": 0, "UNKNOWN" : None}
         for row in csv.DictReader(f, ["time", "price", "UNKNOWN"]): # NOQA
-            if hld["Price"] < row["Price"]:
-                hld = row
+            print(row)
+            # if hld["price"] < float(row["price"]):
+            #     hld = row
 
-    #     try:
-    #         # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
-    #         # raise NotImplementedError("Bạn chưa làm bài này")
-    #         pass
-    #     finally:
-    #         ...
+    print(hld)
 
     return None
 

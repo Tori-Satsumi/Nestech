@@ -8,7 +8,7 @@ def find_max_price(datafile):
     with open(datafile, "r") as f:
         hld = {"time" : None, "price": "0", "UNKNOWN" : None}
         for row in csv.DictReader(f, ["time", "price", "UNKNOWN"]): # NOQA
-            print(int(row["price"]))
+            print(int(float(row["price"])))
 
     print(hld)
 

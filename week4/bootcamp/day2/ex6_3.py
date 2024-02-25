@@ -3,17 +3,13 @@
 import csv
 import os
 import time
-import gzip
-
-# bài này khó. làm đc thì làm 
-
 
 def find_max_price(datafile):
-    # with open(datafile, "rb") as f:
-    #     hld = {"time" : None, "Price": 0, "UNKNOWN" : None}
-    #     for row in csv.DictReader(f, ["time", "price", "UNKNOWN"]): # NOQA
-    #         if hld["Price"] < row["Price"]:
-    #             hld = row
+    with open(datafile, "rb") as f:
+        hld = {"time" : None, "Price": 0, "UNKNOWN" : None}
+        for row in csv.DictReader(f, ["time", "price", "UNKNOWN"]): # NOQA
+            if hld["Price"] < row["Price"]:
+                hld = row
 
     #     try:
     #         # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
@@ -21,11 +17,6 @@ def find_max_price(datafile):
     #         pass
     #     finally:
     #         ...
-            
-    with gzip.open('http://api.bitcoincharts.com/v1/csv/', 'rt', newline='') as csvfile:
-        reader = csv.reader(csvfile)
-        for row in reader:
-            print(row)
 
     return None
 

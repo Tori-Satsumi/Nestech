@@ -11,9 +11,7 @@ import urllib.request, json
 
 
 def find_max_price(datafile):
-    with urllib.request.urlopen("http://api.bitcoincharts.com/v1/csv/") as url:
-        data = json.load(url)
-        print(data)
+
 
             
         return None

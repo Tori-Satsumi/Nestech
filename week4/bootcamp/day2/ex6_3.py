@@ -4,11 +4,15 @@ import csv
 import os
 import time
 
+def convert(inp):
+    return int(str(inp["price"])[:inp["price"].find("0")]) if inp.find(".") != -1 else int(inp)
+
+
 def find_max_price(datafile):
     with open(datafile, "r") as f:
-        hld = {"time" : None, "price": 0, "UNKNOWN" : None}
+        hld = {"time" : None, "price": "0", "UNKNOWN" : None}
         for row in csv.DictReader(f, ["time", "price", "UNKNOWN"]): # NOQA
-            if hld["price"] < int((row["price"])[:row["price"].find(0)]):
+            if convert(hld["price"]) < convert(row["price"]):
                 hld = row
 
     print(hld)

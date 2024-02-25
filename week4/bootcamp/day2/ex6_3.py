@@ -4,18 +4,24 @@ import csv
 import os
 import time
 
-import requests
- 
 # bài này khó. làm đc thì làm 
 
 
 def find_max_price(datafile):
-    response = requests.get('http://api.bitcoincharts.com/v1/csv/')
-    print(response) 
-    # print(response.json())
+    with open("http://api.bitcoincharts.com/v1/csv/", "rb") as f:
+        hld = {"time" : None, "Price": 0, "UNKNOWN" : None}
+        for row in csv.DictReader(f, ["time", "price", "UNKNOWN"]): # NOQA
+            if hld["Price"] < row["Price"]:
+                hld = row
 
-
-    return None
+        try:
+            # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
+            # raise NotImplementedError("Bạn chưa làm bài này")
+            pass
+        finally:
+            ...
+            
+        return None
 
 
 def solve():

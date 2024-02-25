@@ -4,17 +4,18 @@ import csv
 import os
 import time
 
-import urllib.request, json 
-
-
+import requests
+ 
 # bài này khó. làm đc thì làm 
 
 
 def find_max_price(datafile):
+    response = requests.get('http://api.bitcoincharts.com/v1/csv/')
+    print(response) 
+    # print(response.json())
 
 
-            
-        return None
+    return None
 
 
 def solve():

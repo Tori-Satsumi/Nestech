@@ -32,7 +32,7 @@ Tham khảo thêm cho Sysadmin
 # import log
 from typing import Dict
 import os
-from inspect import isfunction
+from inspect import isfunction, getmembers
 from importlib import import_module
 
 # logger = log.get_logger(__name__)
@@ -63,8 +63,9 @@ def your_function(path) -> Dict[str, int]:
             result[name[ind:]] = result[name[ind:]] + 1 if name[ind:] in result else 1
             
             if name[ind:] == ".py":
-                modules = import_module(name)
-                print(modules)
+                
+                print((dir(name)))
+                
 
     # print(result)
 

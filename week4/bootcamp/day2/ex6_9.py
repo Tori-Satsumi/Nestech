@@ -71,7 +71,7 @@ def your_function(path) -> Dict[str, int]:
             if ext == "py":
                 module = import_module(nm)
                 for func in dir(module):
-                    if isfunction(module.func):
+                    if isfunction(getattr(module, func)):
                         print(func)
                 try:
                     ...

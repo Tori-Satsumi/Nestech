@@ -65,8 +65,9 @@ def your_function(path) -> Dict[str, int]:
             if name[ind:] == ".py":
                 for func in dir(name):
                     if isfunction(func):
-                        ...
-                        
+                        nm = name + "func"
+                        result[nm] = result[nm] + 1 if nm in result else 1
+
                 
 
     # print(result)

@@ -23,15 +23,20 @@ def read_api(datapath="https://api.github.com/repos/saltstack/salt/contributors?
     
 
 
-def solve():
+def solve(datafile):
     # read_api()
     with open("info.json", "r") as file:
         data = json.load(file)
         for info in data:
-            if info["contributions"]:
-                ...           
+            if not ("html_url" in info):
+                info["html_url"] = "https://github.com/" + info["login"]
 
-    return None
+            yield {
+                "login" : info["login"],
+                "html_url" : info["html_url"], 
+                "contributions" : info["contributions"]
+                }
+
 
 def main():
     """Truy cập đường dẫn
@@ -43,7 +48,7 @@ def main():
     """
     datafile = data
 
-    for d in solve():
+    for d in solve(datafile):
         print("User: {login} - URL {html_url} - {contributions}".format(**d))
 
 

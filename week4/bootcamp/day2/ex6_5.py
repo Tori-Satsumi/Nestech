@@ -16,11 +16,7 @@ def read_api(datapath="https://api.github.com/repos/saltstack/salt/contributors?
     with urllib.request.urlopen(datapath) as url:
         data = json.load(url)
         with open("info.json", "w") as jsfile:
-            json.dump(data, jsfile, indent=4)
-
-
-    return None
-    
+            json.dump(data, jsfile, indent=4)    
 
 
 def solve(datafile):

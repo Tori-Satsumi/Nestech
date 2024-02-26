@@ -7,13 +7,13 @@ import urllib.request
 data = os.path.join(os.path.dirname(__file__), "salt_contributors.json")
 
 
-def your_function(datapath):
+def read_api(datapath="https://api.github.com/repos/saltstack/salt/contributors?page=4"):
     """Trả về list chứa các dictionary chứa data về các contributor bao gồm
     các key: login, html_url và contributions.
     Nếu html_url nào bị thiếu, tạo html_url mới bằng
     "https://github.com/" + login tương ứng.
     """
-    with urllib.request.urlopen(" https://api.github.com/repos/saltstack/salt/contributors?page=4") as url:
+    with urllib.request.urlopen(datapath) as url:
         data = json.load(url)
         with open("info.json", "w") as jsfile:
             json.dump(data, jsfile, indent=4)
@@ -24,9 +24,9 @@ def your_function(datapath):
 
 
 def solve(input_data):
-    result = your_function(input_data)
-
-    return result
+    read_api()
+    with open("info.json", "r") as file:
+        file.read()
 
 
 def main():
@@ -39,7 +39,7 @@ def main():
     """
     datafile = data
 
-    for d in solve(datafile):
+    for d in solve():
         print("User: {login} - URL {html_url} - {contributions}".format(**d))
 
 

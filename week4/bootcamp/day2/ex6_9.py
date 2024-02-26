@@ -72,8 +72,7 @@ def your_function(path) -> Dict[str, int]:
                 try:
                     module = import_module(nm)
                     for func in dir(module):
-
-                        # if isfunction(func):
+                        if isfunction(object(func)):
                             print(func)
                 except:
                     pass

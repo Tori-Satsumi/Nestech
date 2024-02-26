@@ -14,9 +14,9 @@ def solve(input_data):
        2      10     0o2     0x2
        ...
     """
-    result = None
 
-    return result
+    
+    return None
 
 
 def main():

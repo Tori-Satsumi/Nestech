@@ -16,8 +16,7 @@ def your_function(datapath):
     with urllib.request.urlopen(" https://api.github.com/repos/saltstack/salt/contributors?page=4") as url:
         data = json.load(url)
         with open("info.json", "w") as jsfile:
-            json.dump(data, jsfile)
-            # print(data)
+            json.dump(data, jsfile, indent=4)
 
 
     return None

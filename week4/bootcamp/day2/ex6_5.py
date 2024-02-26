@@ -27,11 +27,9 @@ def solve():
     # read_api()
     with open("info.json", "r") as file:
         data = json.load(file)
-        print()
-        print()
-        print(data[0])
-        print()
-        print()
+        for info in data:
+            if info["contributions"]:
+                ...           
 
     return None
 

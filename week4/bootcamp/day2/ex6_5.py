@@ -26,9 +26,12 @@ def read_api(datapath="https://api.github.com/repos/saltstack/salt/contributors?
 def solve():
     # read_api()
     with open("info.json", "r") as file:
-        data = file.load()
-        for row in data:
-            print(row)
+        data = json.load(file)
+        print()
+        print()
+        print(data[0])
+        print()
+        print()
 
     return None
 

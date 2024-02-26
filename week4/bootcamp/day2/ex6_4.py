@@ -5,8 +5,9 @@ def sumall(*input_data):
     """Viết function ``sumall`` tính tổng của tất cả các argument (int, float,
     hoặc string) được gọi. Thay input_data bằng code phù hợp.
     """
+    
+    return sum([round(float(i), 2) for i in input_data if str(i).isnumeric()])
 
-    return sum([round(float(i), 2) for i in input_data])
 
 def solve():
     result = None

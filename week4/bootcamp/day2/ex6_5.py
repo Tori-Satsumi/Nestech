@@ -23,11 +23,14 @@ def read_api(datapath="https://api.github.com/repos/saltstack/salt/contributors?
     
 
 
-def solve(input_data):
-    read_api()
+def solve():
+    # read_api()
     with open("info.json", "r") as file:
-        file.read()
+        data = file.load()
+        for row in data:
+            print(row)
 
+    return None
 
 def main():
     """Truy cập đường dẫn

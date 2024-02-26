@@ -63,7 +63,8 @@ def your_function(path) -> Dict[str, int]:
             result[ext] = result[ext] + 1 if ext in result else 1
 
             ls = import_module(nm)
-            print(ls)
+            for i in ls:
+                print(i)
 
     # print(result)
 

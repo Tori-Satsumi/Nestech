@@ -59,11 +59,13 @@ def your_function(path) -> Dict[str, int]:
     result = {}
     for root, dirs, files in os.walk(path):
         for name in files:
-            nm, ext = name.rsplit(".", 1)
-            result[ext] = result[ext] + 1 if ext in result else 1
+            with open(name, "r") as fle:
+                print(name)
+                print(len(fle.read()))
+                break
 
-            if ext == "py":
-                ls = import_module(name)
+                # nm, ext = name.rsplit(".", 1)
+                # result[ext] = result[ext] + 1 if ext in result else 1
 
 
     # print(result)

@@ -68,13 +68,14 @@ def your_function(path) -> Dict[str, int]:
             except:
                 result[ext] = 0
 
-            try:
-                ls = import_module(nm)
-                
-                # if isfunction(func):
-                #     print(func)
-            except:
-                pass
+            if ext == "py":
+                try:
+                    ls = import_module(nm)
+                    print(ls)
+                    # if isfunction(func):
+                    #     print(func)
+                except:
+                    pass
 
     # print(result)
 

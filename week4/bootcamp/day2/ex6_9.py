@@ -60,6 +60,7 @@ def your_function(path) -> Dict[str, int]:
     for root, dirs, files in os.walk(path):
         for name in files:
             with open(name, "r") as fle:
+                print(name)
                 for line in list(fle):
                     print(line.rstrip())
 

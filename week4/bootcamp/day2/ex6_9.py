@@ -63,9 +63,7 @@ def your_function(path) -> Dict[str, int]:
             result[ext] = result[ext] + 1 if ext in result else 1
 
             if ext == "py":
-                for i in dir(name):
-                    print(i)
-
+                ls = import_module(name)
 
 
     # print(result)

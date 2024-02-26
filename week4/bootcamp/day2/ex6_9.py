@@ -64,10 +64,10 @@ def your_function(path) -> Dict[str, int]:
             
             if name[ind:] == ".py":
                 nm = name + "func"
-                
+
                 print()                
                 print()                
-                for func in dir(name):
+                for func in import_module(name):
                     print(func)
 
                 print()                

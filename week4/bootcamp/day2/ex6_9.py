@@ -84,8 +84,12 @@ def your_function(path) -> Dict[str, int]:
     for key, value in result.items():
         print(f"{key} file extension has {value} line(s) of code")
     print("\n\n")
+    for key, lst in module_name.items():
+        print(f"{key} has: {len(lst)} of user made function(s) \n include: {' '.join(lst)}")
+
     print(module_name)
     print("\n\n")
+
 
     return None
 

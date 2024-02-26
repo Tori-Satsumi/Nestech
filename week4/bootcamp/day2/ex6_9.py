@@ -57,21 +57,21 @@ def your_function(path) -> Dict[str, int]:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
     result = {}
+    name = {}
     for root, dirs, files in os.walk(path):
         for name in files:
-            with open(name, "r") as fle:
-                print(name)
-                for line in list(fle):
-                    print(line.rstrip())
+            nm, ext = name.rsplit(".", 1)
+            try:
+                with open(name, "r") as fle:
+                    ln = len(list(fle))
+                    result[ext] = result[ext] + ln if ext in result else ln
+            except:
+                result[ext] = 0
 
-                break
+            if ext == "py":
+                ...
 
-        break
-                # nm, ext = name.rsplit(".", 1)
-                # result[ext] = result[ext] + 1 if ext in result else 1
-
-
-    # print(result)
+    print(result)
 
     return None
 

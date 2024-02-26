@@ -61,8 +61,10 @@ def your_function(path) -> Dict[str, int]:
         for name in files:
             ind = name.find(".")
             name[ind:] = name[ind:] + 1 if name[ind:] in result else 1
-
-
+            
+            if name[ind:] == ".py":
+                ...
+                
     return None
 
 

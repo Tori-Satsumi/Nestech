@@ -58,13 +58,12 @@ def your_function(path) -> Dict[str, int]:
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
     result = {}
     for root, dirs, files in os.walk(path):
-        print(files)
-        # for name in files:
-        #     ind = name.find(".")
-        #     result[name[ind:]] = result[name[ind:]] + 1 if name[ind:] in result else 1
-            
-        #     if name[ind:] == ".py":
-        #         ...
+        for name in files:
+            nm, ext = name.rsplit(".", 1)
+            result[ext] = result[ext] + 1 if ext in result else 1
+
+            ls = import_module(nm)
+            print(ls)
 
     # print(result)
 

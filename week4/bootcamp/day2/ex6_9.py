@@ -60,10 +60,12 @@ def your_function(path) -> Dict[str, int]:
     for root, dirs, files in os.walk(path):
         for name in files:
             with open(name, "r") as fle:
-                print(name)
-                print(len(fle.read()))
+                for line in fle:
+                    print(line.rstrip())
+
                 break
 
+        break
                 # nm, ext = name.rsplit(".", 1)
                 # result[ext] = result[ext] + 1 if ext in result else 1
 

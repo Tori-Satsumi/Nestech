@@ -62,9 +62,11 @@ def your_function(path) -> Dict[str, int]:
             nm, ext = name.rsplit(".", 1)
             result[ext] = result[ext] + 1 if ext in result else 1
 
-            ls = import_module(nm)
-            for i in ls:
-                print(i)
+            if ext == "py":
+                for i in dir(name):
+                    print(i)
+
+
 
     # print(result)
 

@@ -19,7 +19,6 @@ Gợi ý: sử dụng 2 module `inspect` và `importlib`
 ``from inspect import isfunction``
 ``from importlib import import_module``
 
-
 Tham khảo thêm cho Sysadmin
 
 - Explore more stdlib for system: os, shutil, subprocess, thread, multiprocess,
@@ -33,6 +32,8 @@ Tham khảo thêm cho Sysadmin
 # import log
 from typing import Dict
 import os
+from inspect import isfunction
+from importlib import import_module
 
 # logger = log.get_logger(__name__)
 # PATH = "."

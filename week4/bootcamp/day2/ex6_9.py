@@ -69,9 +69,8 @@ def your_function(path) -> Dict[str, int]:
                 result[ext] = 0
 
             try:
+                ls = import_module(name)
                 print(name)
-                for func in import_module(name):
-                    print(func)
                 # if isfunction(func):
                 #     print(func)
             except:

@@ -56,9 +56,12 @@ def your_function(path) -> Dict[str, int]:
     :rtype dict:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
-
+    result = {}
     for root, dirs, files in os.walk(path):
-        print(files)
+        for name in files:
+            ind = name.find(".")
+            name[ind:] = name[ind:] + 1 if name[ind:] in result else 1
+
 
     return None
 

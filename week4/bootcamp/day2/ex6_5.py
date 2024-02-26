@@ -2,7 +2,7 @@
 
 import os
 import json  # NOQA
-
+import urllib.request
 
 data = os.path.join(os.path.dirname(__file__), "salt_contributors.json")
 
@@ -13,9 +13,12 @@ def your_function(datapath):
     Nếu html_url nào bị thiếu, tạo html_url mới bằng
     "https://github.com/" + login tương ứng.
     """
-    result = None
+    with urllib.request.urlopen(" https://api.github.com/repos/saltstack/salt/contributors?page=4") as url:
+        data = json.load(url)
+        print(data)
 
-    return result
+
+    return None
     
 
 

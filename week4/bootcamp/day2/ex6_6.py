@@ -20,7 +20,7 @@ def repositories(github_login):
             for info in repos[2:]:
                 yield info["name"]
         else:
-            raise 
+            raise ReferenceError("This user does not have any repository")
 
 
 

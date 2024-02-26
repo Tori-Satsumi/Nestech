@@ -57,9 +57,10 @@ def your_function(path) -> Dict[str, int]:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
 
-    result = None
+    for root, dirs, files in os.walk(path):
+        print(files)
 
-    return result
+    return None
 
 
 

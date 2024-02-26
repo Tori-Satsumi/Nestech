@@ -57,7 +57,7 @@ def your_function(path) -> Dict[str, int]:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
     result = {}
-    name = {}
+    module_name = {}
     for root, dirs, files in os.walk(path):
         for name in files:
             nm, ext = name.rsplit(".", 1)
@@ -76,13 +76,19 @@ def your_function(path) -> Dict[str, int]:
                 """
                 try:
                     module = import_module(nm)
-                    for func in dir(module):
-                        if isfunction(getattr(module, func)):
-                            print(func)
+                    module_name[name] = [func for func in dir(module) if isfunction(getattr(module, func))]
                 except:
                     pass
 
-    # print(result)
+    print()
+    print()
+    for key, value in result.items():
+        print(f"{key} file extension has {value} line(s) of code")
+  
+    
+    print(module_name)
+    print()
+    print()
 
     return None
 

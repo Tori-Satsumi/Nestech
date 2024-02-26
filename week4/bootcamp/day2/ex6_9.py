@@ -80,17 +80,12 @@ def your_function(path) -> Dict[str, int]:
                 except:
                     pass
 
-    print()
-    print()
+    print("\n\n")
     for key, value in result.items():
         print(f"{key} file extension has {value} line(s) of code")
-    print()
-    print()
-  
-    
+    print("\n\n")
     print(module_name)
-    print()
-    print()
+    print("\n\n")
 
     return None
 

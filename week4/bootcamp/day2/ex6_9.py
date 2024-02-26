@@ -84,6 +84,8 @@ def your_function(path) -> Dict[str, int]:
     print()
     for key, value in result.items():
         print(f"{key} file extension has {value} line(s) of code")
+    print()
+    print()
   
     
     print(module_name)

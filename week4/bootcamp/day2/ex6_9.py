@@ -31,7 +31,6 @@ Tham khảo thêm cho Sysadmin
 
 # import log
 from typing import Dict
-from re import __all__
 import os
 from inspect import isfunction, getmembers
 from importlib import import_module
@@ -65,9 +64,15 @@ def your_function(path) -> Dict[str, int]:
             
             if name[ind:] == ".py":
                 nm = name + "func"
-                print(name)
-                # for func in dir(name):
-                    
+                
+                print()                
+                print()                
+                for func in dir(name):
+                    print(func)
+
+                print()                
+                print()                
+
                     # if isfunction(func):
                     #     result[nm] = result[nm] + 1 if nm in result else 1
 

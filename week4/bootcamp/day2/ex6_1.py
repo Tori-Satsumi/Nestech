@@ -1,16 +1,11 @@
 #!/usr/bin/env python3
-
 data = {"first_50": 1230, "from_51_to_100": 1530, "above_100": 1786}
-
-
 def calculate_cost(usage, prices):
     """Tính tiền điện
     với giá tiền cho bởi đề bài, số điện tiêu thụ `usage`
     Trả về giá tiền ở dạng biểu diễn cho người đọc dễ nhìn
     Ví dụ: 100000 -> "100,000"
-
     Biết:
-
     In [1]: "{:,}".format(10000) == "10,000"
     Out[1]: True
     """
@@ -19,13 +14,10 @@ def calculate_cost(usage, prices):
     price50 = prices["first_50"]
     price100 = prices["from_51_to_100"]
     return 50 * price50 + 50 * price100 + (usage - 100) * prices["above_100"] if usage > 100 else 50 * price50 + (usage - 50) * price100 if usage > 50 else usage * price50
-
 def solve(input_data):
     result = None
-
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
     # raise NotImplementedError("Bạn chưa làm bài này")
-
     # Bài này làm mẫu, gọi function định nghĩa với input để
     # tính kết quả.
     # Các bài còn lại tự định nghĩa function và gọi function để
@@ -33,14 +25,10 @@ def solve(input_data):
     result = [
         (i[0].title(), calculate_cost(i[1], input_data["prices"])) for i in input_data["usages"]
     ]
-
     return result
-
-
 def main():
     """
     Cho tiền điện sinh hoạt được tính theo công thức:
-
     - 50 số đầu: 1230 VND/số.
     - 50 số tiếp: 1530 VND/số.
     - Các số tiếp theo: 1786 VND/số.
@@ -56,8 +44,6 @@ def main():
         "prices": data,
     }
     print(solve(idata))
-
-
 # __name__ là một biến|name đặc biệt do Python tự tạo ra
 # nó có giá trị là string "__main__" khi file được chạy bằng lệnh
 # python filename.py

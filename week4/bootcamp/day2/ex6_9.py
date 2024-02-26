@@ -72,7 +72,8 @@ def your_function(path) -> Dict[str, int]:
                 try:
                     module = import_module(nm)
                     for func in dir(module):
-                        if isfunction(object(func)):
+                        print(type(nm.func))
+                        if isfunction(nm.func):
                             print(func)
                 except:
                     pass

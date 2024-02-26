@@ -9,8 +9,9 @@ def sumall(*input_data):
     return sum([round(float(i), 2) for i in input_data if str(i).isnumeric()])
 
 def convert_flt(num):
-    if str(num).find(".") != -1:
-        if str(num * (10 ** len(num[num.find("."):]))).isnumeric:
+    num = str(num)
+    if num.find(".") != -1:
+        if str((float(num)) * (10 ** len(num[num.find("."):]))).isnumeric():
             return True
         
     return False
@@ -18,9 +19,9 @@ def convert_flt(num):
 
 def solve():
     m = 10.12
+    print(convert_flt(m))
 
-
-    return result
+    return None
 
 
 def main():

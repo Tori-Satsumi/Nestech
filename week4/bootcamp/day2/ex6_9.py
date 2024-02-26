@@ -69,12 +69,16 @@ def your_function(path) -> Dict[str, int]:
                 result[ext] = 0
 
             if ext == "py":
-                module = import_module(nm)
-                for func in dir(module):
-                    if isfunction(getattr(module, func)):
-                        print(func)
+                """                
+                TODO: remove try except
+                really dont need the try except here
+                just to be safe
+                """
                 try:
-                    ...
+                    module = import_module(nm)
+                    for func in dir(module):
+                        if isfunction(getattr(module, func)):
+                            print(func)
                 except:
                     pass
 

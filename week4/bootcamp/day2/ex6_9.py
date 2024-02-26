@@ -68,10 +68,14 @@ def your_function(path) -> Dict[str, int]:
             except:
                 result[ext] = 0
 
-            for func in dir(name):
-                print(func)
+            try:
+                print(name)
+                for func in import_module(name):
+                    print(func)
                 # if isfunction(func):
                 #     print(func)
+            except:
+                pass
 
     # print(result)
 

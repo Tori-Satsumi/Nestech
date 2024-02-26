@@ -65,7 +65,7 @@ def your_function(path) -> Dict[str, int]:
             if name[ind:] == ".py":
                 nm = name + "func"
 
-                import_module(".py" ,name)
+                import_module(".py", "math")
 
                     # if isfunction(func):
                     #     result[nm] = result[nm] + 1 if nm in result else 1

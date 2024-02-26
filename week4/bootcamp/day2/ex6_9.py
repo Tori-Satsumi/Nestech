@@ -70,7 +70,7 @@ def your_function(path) -> Dict[str, int]:
 
             try:
                 ls = import_module(nm)
-                print(ls)
+                
                 # if isfunction(func):
                 #     print(func)
             except:

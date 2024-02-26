@@ -60,11 +60,14 @@ def your_function(path) -> Dict[str, int]:
     for root, dirs, files in os.walk(path):
         for name in files:
             ind = name.find(".")
-            name[ind:] = name[ind:] + 1 if name[ind:] in result else 1
+            result[name[ind:]] = result[name[ind:]] + 1 if name[ind:] in result else 1
             
             if name[ind:] == ".py":
-                ...
-                
+                modules = import_module(name)
+                print(modules)
+
+    # print(result)
+
     return None
 
 

@@ -14,15 +14,14 @@ def solve(input_data):
        2      10     0o2     0x2
        ...
     """
-
-    
-    return None
+    return [str(num).rjust(4) + bin(num).rjust(8) + oct(num).rjust(8) + hex(num).rjust(8) for num in input_data]
 
 
 def main():
     input_data = range(1, 20)
-    print(solve(input_data))
-
+    # print(solve(input_data))
+    for i in solve(input_data):
+        print(i)
 
 if __name__ == "__main__":
     main()

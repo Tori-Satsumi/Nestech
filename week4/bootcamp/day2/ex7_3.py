@@ -45,14 +45,14 @@ def your_function():
         
         with open("event.json", "w") as jsfile:
             json.dump(info, jsfile, indent=4)
-            print(f"json file size: {os.path.getsize('event.json')}")
 
         with open("event.pkl", "wb") as pklfile:
             pickle.dump(info, pklfile)
-            print(f"pkl file size: {os.path.getsize('event.pkl')}")
 
+    print(f"\njson file size: {os.path.getsize('event.json')} bytes")
+    print(f"pkl file size: {os.path.getsize('event.pkl')} bytes")
 
-    return None
+    return "\n"
 
 
 def solve():

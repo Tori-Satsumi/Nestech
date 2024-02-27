@@ -15,10 +15,12 @@ thắng.
 
 
 class Fighter:
-    def __init__(self, name, initial_health=100) -> None:
+    def __init__(self, name, initial_health=100, level=0, defendpoint=0) -> None:
         self.name = name
         self.maxhealth = initial_health
         self.health = initial_health
+        self.level = level
+        self.defendpoint = defendpoint
 
     def __str__(self) -> str:
         return f"{self.name} has {self.health}/{self.maxhealth} left"
@@ -32,22 +34,6 @@ class Fighter:
         if not name:
             raise ValueError("No name given")
         self._name = name
-
-    @property
-    def health(self):
-        return self._health
-
-    @health.setter
-    def health(self, health):
-        self._health = health
-
-    @property
-    def maxhealth(self):
-        return self._maxhealth
-
-    @maxhealth.setter
-    def maxhealth(self, initial_health):
-        self._maxhealth = initial_health
 
     def take_dmg(self, dmg_taken):
         self.health -= dmg_taken
@@ -67,8 +53,8 @@ def solve(player1, player2):
 
 def main():
     # Thay đổi các dòng sau cho phù hợp
-    player1 = Fighter('Nguyễn Phương Hằng', 1000)
-    player2 = Fighter('Thuỷ Tiên', 100)
+    player1 = Fighter('Nguyễn Phương Hằng', 1000, 3, 30)
+    player2 = Fighter('Thuỷ Tiên', 100, 2, 85)
     print(solve(player1, player2))
 
 

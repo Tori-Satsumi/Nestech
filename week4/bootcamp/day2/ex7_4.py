@@ -31,8 +31,11 @@ def solve() -> str:
         :return: Connection object or None
         """
 
+        # connect to file
         conn = sqlite3.connect(db_file)
+        # create cursor
         cur = conn.cursor()
+        
         cur.execute("SELECT * FROM crime_scene_report")
 
         rows = cur.fetchall()

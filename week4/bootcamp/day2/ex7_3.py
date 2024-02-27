@@ -47,7 +47,7 @@ def your_function():
             json.dump(info, jsfile, indent=4)
 
         with open("event.pkl", "w", encoding="utf-8") as pklfile:
-            ...
+            pickle.dump(info, pklfile)
 
     return None
 

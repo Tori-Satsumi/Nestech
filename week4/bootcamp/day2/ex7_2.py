@@ -19,7 +19,11 @@ class Weapon:
         self.crit_hit_req = 0
 
     def deal_dmg(self):
-        return self.dmg
+        if self.crit_hit_req >= 5:
+            self.crit_hit_req = 0
+            return 20 * self.player_lvl
+        
+        return randint(self.player_lvl, 10 + self.player_lvl)
 
     def crit_require(self, hit):
         self.crit_hit_req = hit
@@ -49,14 +53,9 @@ class Fighter(Weapon):
     def take_dmg(self, dmg_taken):
         dmg = dmg_taken * (100 - self.defendpoint) / 100
         if (dmg / self.maxhealth) * 100 > 0.1:
-            self.crit_hit_req = round(self.maxhealth / dmg, 0)
+            super().crit_require(round(self.maxhealth / dmg, 0))
         self.health -= dmg
 
-    def deal_dmg(self):
-        if self.crit_hit_req >= 5:
-            self.crit_hit_req = 0
-            return 10 * self.level
-        return randint(1, 10)
 
 def solve(player1, player2):
     """Trả về tuple tên người thắng cuộc và lượng máu còn lại (int)"""

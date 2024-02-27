@@ -13,6 +13,9 @@ thắng.
 Đọc file class.md trong thư mục này.
 """
 
+class Weapon:
+    def __init__(self) -> None:
+        self.dmg = randint(1, 10)
 
 class Fighter(Weapon):
     def __init__(self, name, initial_health=100, level=0, defendpoint=0) -> None:
@@ -47,10 +50,6 @@ class Fighter(Weapon):
             self.crit_hit_req = 0
             return 10 * self.level
         return randint(1, 10)
-
-class Weapon:
-    def __init__(self) -> None:
-        self.dmg = randint(1, 10)
 
 def solve(player1, player2):
     """Trả về tuple tên người thắng cuộc và lượng máu còn lại (int)"""

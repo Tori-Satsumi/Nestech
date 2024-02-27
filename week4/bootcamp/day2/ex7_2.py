@@ -14,7 +14,7 @@ thắng.
 """
 
 class Weapon:
-    def __init__(self) -> None:
+    def __init__(self, level) -> None:
         self.dmg = randint(1, 10)
 
 class Fighter(Weapon):

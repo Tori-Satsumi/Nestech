@@ -79,13 +79,10 @@ def solve(player1, player2):
     """Trả về tuple tên người thắng cuộc và lượng máu còn lại (int)"""
 
     while player1.health > 0 and player2.health > 0:
-        player1.take_dmg(dmg_taken=player2.deal_dmg())
-        player2.take_dmg(dmg_taken=player1.deal_dmg())
+        player1.take_dmg(player2.deal_dmg())
+        player2.take_dmg(player1.deal_dmg())
     
     return (player1.name, player1.health) if player1.health > 0 else (player2.name, player2.health)
-        
-
-
 
 
 def main():

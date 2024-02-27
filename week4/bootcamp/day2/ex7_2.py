@@ -69,22 +69,20 @@ class Fighter(Weapon):
         self._defendpoint = defendpoint
 
     def take_dmg(self, dmg_taken):
-        mn = (100 - self.defendpoint)
-        print(int(dmg_taken))
-        lsd = dmg_taken * mn
-
-
-        if (total_dmg / self.maxhealth) * 100 > 0.1:
-            super().crit_require(round(self.maxhealth / total_dmg, 0))
-        self.health -= total_dmg
+        h = dmg_taken
+        print(h)
+        dmg = dmg_taken * (100 - self.defendpoint) / 100
+        if (dmg / self.maxhealth) * 100 > 0.1:
+            super().crit_require(round(self.maxhealth / dmg, 0))
+        self.health -= dmg
 
 
 def solve(player1, player2):
     """Trả về tuple tên người thắng cuộc và lượng máu còn lại (int)"""
 
     while player1.health > 0 and player2.health > 0:
-        player1.take_dmg(player2.deal_dmg)
-        player2.take_dmg(player1.deal_dmg)
+        player1.take_dmg(dmg_taken=player2.deal_dmg)
+        player2.take_dmg(dmg_taken=player1.deal_dmg)
     
     return (player1.name, player1.health) if player1.health > 0 else (player2.name, player2.health)
         

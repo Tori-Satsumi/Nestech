@@ -11,7 +11,7 @@ def solve(a, *args):
     Python.
 
     """
-    print()
+    print(sum())
 
     return None
 

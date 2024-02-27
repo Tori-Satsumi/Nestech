@@ -17,9 +17,10 @@ thắng.
 class Fighter:
     def __init__(self, name, health) -> None:
         self.name = name
-        self.health = health
+        self.maxhealth = health
 
-    
+    def __str__(self) -> str:
+        return f"{self.name} has {self.health} left"
 
 
 

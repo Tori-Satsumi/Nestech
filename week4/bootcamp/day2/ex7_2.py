@@ -60,8 +60,17 @@ class Fighter(Weapon):
             raise ValueError("No name given")
         self._name = name
 
+    @property
+    def defendpoint(self):
+        return self._defendpoint
+
+    @defendpoint.setter
+    def defendpoint(self, defendpoint):
+        self._defendpoint = defendpoint
+
     def take_dmg(self, dmg_taken):
-        dmg = dmg_taken * (100 - self.defendpoint) / 100
+        mn = (100 - self.defendpoint)
+        dmg = dmg_taken * mn / 100
         if (dmg / self.maxhealth) * 100 > 0.1:
             super().crit_require(round(self.maxhealth / dmg, 0))
         self.health -= dmg

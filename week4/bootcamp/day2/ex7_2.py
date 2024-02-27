@@ -15,9 +15,9 @@ thắng.
 
 
 class Fighter:
-    def __init__(self, name, health) -> None:
+    def __init__(self, name, initial_health=100) -> None:
         self.name = name
-        self.maxhealth = health
+        self.maxhealth = initial_health
 
     def __str__(self) -> str:
         return f"{self.name} has {self.health} left"
@@ -31,6 +31,14 @@ class Fighter:
         if not name:
             raise ValueError("No name given")
         self._name = name
+
+    @property
+    def maxhealth(self):
+        return self._maxhealth
+
+    @maxhealth.setter
+    def maxhealth(self, initial_health):
+        self._maxhealth = initial_health
 
 class Weapon:
     ...

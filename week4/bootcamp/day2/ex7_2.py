@@ -36,7 +36,7 @@ class Fighter:
         self._name = name
 
     def take_dmg(self, dmg_taken):
-        self.health -= dmg_taken
+        self.health -= dmg_taken * (100 - self.defendpoint) / 100
 
     def deal_dmg(self):
         return randint(1, 10)

@@ -42,8 +42,12 @@ def your_function():
             info = yaml.safe_load(f)
         except yaml.YAMLError as exc:
             print(exc)
+        
         with open("event.json", "w") as jsfile:
             json.dump(info, jsfile, indent=4)
+
+        with open("event.pkl", "w", encoding="utf-8") as pklfile:
+            ...
 
     return None
 

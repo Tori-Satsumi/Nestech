@@ -15,16 +15,23 @@ thắng.
 
 class Weapon:
     def __init__(self, level) -> None:
-        self.dmg = randint(1, 10)
+        self.player_lvl = level
+        self.crit_hit_req = 0
+
+    def deal_dmg(self):
+        return self.dmg
+
+    def crit_require(self, hit):
+        self.crit_hit_req = hit
 
 class Fighter(Weapon):
     def __init__(self, name, initial_health=100, level=0, defendpoint=0) -> None:
+        super().__init__(level)
         self.name = name
         self.maxhealth = initial_health
         self.health = initial_health
         self.level = level
         self.defendpoint = defendpoint
-        self.crit_hit_req = 0
 
     def __str__(self) -> str:
         return f"{self.name} has {self.health}/{self.maxhealth} left"

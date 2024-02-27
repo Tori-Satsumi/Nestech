@@ -39,10 +39,11 @@ def your_function():
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
     with open("event.yaml", "r") as f:
         try:
-            print(yaml.safe_load(f))
+            info = yaml.safe_load(f)
         except yaml.YAMLError as exc:
             print(exc)
-
+        with open("event.json", "w") as jsfile:
+            json.dump(info, jsfile, indent=4)
 
     return None
 

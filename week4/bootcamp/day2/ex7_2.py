@@ -15,7 +15,11 @@ thắng.
 
 
 class Fighter:
-    ...
+    def __init__(self, name, health) -> None:
+        self.name = name
+        self.health = health
+
+    
 
 
 

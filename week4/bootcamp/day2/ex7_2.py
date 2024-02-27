@@ -18,9 +18,10 @@ class Fighter:
     def __init__(self, name, initial_health=100) -> None:
         self.name = name
         self.maxhealth = initial_health
+        self.health = initial_health
 
     def __str__(self) -> str:
-        return f"{self.name} has {self.health} left"
+        return f"{self.name} has {self.health}/{self.maxhealth} left"
 
     @property
     def name(self):
@@ -31,6 +32,14 @@ class Fighter:
         if not name:
             raise ValueError("No name given")
         self._name = name
+
+    @property
+    def health(self):
+        return self._health
+
+    @health.setter
+    def health(self, health):
+        self._health = health
 
     @property
     def maxhealth(self):

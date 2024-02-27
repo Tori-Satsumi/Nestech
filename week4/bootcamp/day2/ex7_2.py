@@ -14,7 +14,7 @@ thắng.
 """
 
 
-class Fighter:
+class Fighter(Weapon):
     def __init__(self, name, initial_health=100, level=0, defendpoint=0) -> None:
         self.name = name
         self.maxhealth = initial_health
@@ -49,7 +49,8 @@ class Fighter:
         return randint(1, 10)
 
 class Weapon:
-    ...
+    def __init__(self) -> None:
+        self.dmg = randint(1, 10)
 
 def solve(player1, player2):
     """Trả về tuple tên người thắng cuộc và lượng máu còn lại (int)"""
@@ -57,7 +58,7 @@ def solve(player1, player2):
     while player1.health > 0 and player2.health > 0:
         ...
 
-    return result
+    return None
 
 
 def main():

@@ -11,15 +11,11 @@ def solve(a, *args):
     Python.
 
     """
-    ls = [a] + list(args)
-    print(sum([Fraction(i) for i in ls]))
-
-    return None
-
+    return float(sum([Fraction(i) for i in [a] + list(args)]))
 
 
 def main():
-    print(solve("1/10", "1/10", "1/10"))
+    print(solve("1/10", "2/15", "3/20"))
 
 
 # __name__ là một biến|name đặc biệt do Python tự tạo ra

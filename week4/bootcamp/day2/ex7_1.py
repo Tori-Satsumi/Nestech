@@ -12,7 +12,7 @@ def solve(a, *args):
 
     """
     ls = [a] + list(args)
-    print(sum([int(float(i)) for i in ls]))
+    print(sum([Fraction(i) for i in ls]))
 
     return None
 

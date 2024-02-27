@@ -45,11 +45,11 @@ def your_function():
         
         with open("event.json", "w") as jsfile:
             json.dump(info, jsfile, indent=4)
-            print(f"json file size: {os.stat('event.json').st_size}")
+            print(f"json file size: {os.stat('/workspaces/Nestech/week4/bootcamp/day2/event.json').st_size}")
 
         with open("event.pkl", "wb") as pklfile:
             pickle.dump(info, pklfile)
-            print(f"pkl file size: {os.stat('event.pkl').st_size}")
+            print(f"pkl file size: {os.stat('/workspaces/Nestech/week4/bootcamp/day2/event.pkl').st_size}")
 
 
     return None

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import random
+from random import randint
 
 """
 Viết 1 một trò chơi đánh đối kháng giữa 2 nhân vật. Mỗi nhân vật có tên (str),
@@ -48,6 +48,12 @@ class Fighter:
     @maxhealth.setter
     def maxhealth(self, initial_health):
         self._maxhealth = initial_health
+
+    def take_dmg(self, dmg_taken):
+        self.health -= dmg_taken
+
+    def deal_dmg(self):
+        return randint(1, 10)
 
 class Weapon:
     ...

@@ -21,6 +21,7 @@ class Fighter:
         self.health = initial_health
         self.level = level
         self.defendpoint = defendpoint
+        self.crit_hit_req = 0
 
     def __str__(self) -> str:
         return f"{self.name} has {self.health}/{self.maxhealth} left"
@@ -36,9 +37,15 @@ class Fighter:
         self._name = name
 
     def take_dmg(self, dmg_taken):
-        self.health -= dmg_taken * (100 - self.defendpoint) / 100
+        dmg = dmg_taken * (100 - self.defendpoint) / 100
+        if (dmg / self.maxhealth) * 100 > 0.1:
+            self.crit_hit_req = round(self.maxhealth / dmg, 0)
+        self.health -= dmg
 
     def deal_dmg(self):
+        if self.crit_hit_req >= 5:
+            self.crit_hit_req = 0
+            return 10 * self.level
         return randint(1, 10)
 
 class Weapon:
@@ -46,7 +53,9 @@ class Weapon:
 
 def solve(player1, player2):
     """Trả về tuple tên người thắng cuộc và lượng máu còn lại (int)"""
-    result = None
+    
+    while player1.health > 0 and player2.health > 0:
+        ...
 
     return result
 

@@ -68,8 +68,8 @@ class Fighter(Weapon):
     def defendpoint(self, defendpoint):
         self._defendpoint = defendpoint
 
-    def take_dmg(self, dmg_taken):
-        print(list(dmg_taken))
+    def take_dmg(self, dmg_taken : int):
+        print(type(dmg_taken))
 
         dmg = dmg_taken * (100 - self.defendpoint) / 100
         if (dmg / self.maxhealth) * 100 > 0.1:

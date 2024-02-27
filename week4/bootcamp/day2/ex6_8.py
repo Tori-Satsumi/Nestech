@@ -18,9 +18,9 @@ def send_gmail(
     # đổi các giá trị phù hợp.
     # Từ khóa: NHA_CUNG_CAP SMTP settings
     smtpserver = smtplib.SMTP("smtp.gmail.com", 587)
-    smtpserver.ehlo()
+    # smtpserver.ehlo()
     smtpserver.starttls()
-    smtpserver.ehlo()
+    # smtpserver.ehlo()
     # Gmail yêu cầu một số cài đặt để truy cập qua code.
     # Với tài khoản đăng nhập chỉ cần user/password, cần bật "Allow less secure
     # apps" tại

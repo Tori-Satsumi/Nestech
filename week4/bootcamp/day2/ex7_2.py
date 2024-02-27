@@ -69,8 +69,8 @@ class Fighter(Weapon):
         self._defendpoint = defendpoint
 
     def take_dmg(self, dmg_taken):
-        h = dmg_taken
-        print(h)
+        
+
         dmg = dmg_taken * (100 - self.defendpoint) / 100
         if (dmg / self.maxhealth) * 100 > 0.1:
             super().crit_require(round(self.maxhealth / dmg, 0))

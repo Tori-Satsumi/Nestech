@@ -14,12 +14,15 @@ thắng.
 """
 
 class Special:
-    ability = ["heal", "ex_crit", "life_stl"]
-
     def __init__(self) -> None:
-        self.ability = ability[randint(0, 3)]
+        self.ability = self.perk
 
-class Weapon:
+    def perk(self):
+        ability = ["heal", "ex_crit", "life_stl"]
+        return ability[randint(0, 3)]
+
+
+class Weapon():
     def __init__(self, level) -> None:
         self.player_lvl = level
         self.crit_hit_req = 0
@@ -33,6 +36,7 @@ class Weapon:
 
     def crit_require(self, hit):
         self.crit_hit_req = hit
+
 
 class Fighter(Weapon):
     def __init__(self, name, initial_health=100, level=0, defendpoint=0) -> None:
@@ -64,12 +68,16 @@ class Fighter(Weapon):
 
 
 def solve(player1, player2):
-    """Trả về tuple tên người thắng cuộc và lượng máu còn lại (int)"""        
+    """Trả về tuple tên người thắng cuộc và lượng máu còn lại (int)"""
+
     while player1.health > 0 and player2.health > 0:
         player1.take_dmg(player2.deal_dmg)
         player2.take_dmg(player1.deal_dmg)
+    
+    return (player1.name, player1.health) if player1.health > 0 else (player2.name, player2.health)
+        
 
-    return None
+
 
 
 def main():

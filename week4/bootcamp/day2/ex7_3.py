@@ -45,6 +45,7 @@ def your_function():
         
         with open("event.json", "w") as jsfile:
             json.dump(info, jsfile, indent=4)
+            print(f"json file size: {os.stat(jsfile).st_size}")
 
         with open("event.pkl", "w", encoding="utf-8") as pklfile:
             pickle.dump(info, pklfile)

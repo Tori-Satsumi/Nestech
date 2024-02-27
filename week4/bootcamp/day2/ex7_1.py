@@ -11,9 +11,9 @@ def solve(a, *args):
     Python.
 
     """
-    result = None
+    print(args)
 
-    return result
+    return None
 
 
 

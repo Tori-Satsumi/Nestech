@@ -70,10 +70,13 @@ class Fighter(Weapon):
 
     def take_dmg(self, dmg_taken):
         mn = (100 - self.defendpoint)
-        dmg = dmg_taken * mn / 100
-        if (dmg / self.maxhealth) * 100 > 0.1:
-            super().crit_require(round(self.maxhealth / dmg, 0))
-        self.health -= dmg
+        print(int(dmg_taken))
+        lsd = dmg_taken * mn
+
+
+        if (total_dmg / self.maxhealth) * 100 > 0.1:
+            super().crit_require(round(self.maxhealth / total_dmg, 0))
+        self.health -= total_dmg
 
 
 def solve(player1, player2):

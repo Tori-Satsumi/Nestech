@@ -22,7 +22,7 @@ def solve() -> str:
     Dùng thư viện có sẵn sqlite3 giải bài này.
     """
     result = None
-    db_file = "Bootcamp/day_2/sql-murder-mystery.db"
+    db_file = "sql-murder-mystery.db"
 
     def create_connection(db_file):
         """ create a database connection to the SQLite database

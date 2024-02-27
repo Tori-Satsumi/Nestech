@@ -37,9 +37,14 @@ def your_function():
     :rtype int:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
-    result = None
+    with open("event.yaml", "r") as f:
+        try:
+            print(yaml.safe_load(f))
+        except yaml.YAMLError as exc:
+            print(exc)
 
-    return result
+
+    return None
 
 
 def solve():

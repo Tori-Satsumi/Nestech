@@ -22,9 +22,11 @@ class Fighter:
     def __str__(self) -> str:
         return f"{self.name} has {self.health} left"
 
+    @property
     def name(self):
         return self._name
 
+    @name.setter
     def name(self, name):
         if not name:
             raise ValueError("No name given")

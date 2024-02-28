@@ -26,7 +26,7 @@ def rand_pass(length=16):
         chk = {}
         while len(pasw) < length:
             _i = secrets.randbelow(len(cont))
-            chk[str(_i)] = None
+            chk[str(_i)] = True
             pasw += secrets.choice(cont[_i])
         
         if len(chk) == len(cont):

@@ -19,9 +19,10 @@ def solve(*args, **kwargs):
     """
 
     # Đường dẫn tới code của module `os`
-    result = None
+    for root, dirs, files in os.walk("."):
+        print(root, dirs, files)
 
-    return result
+    return None
 
 
 def main():

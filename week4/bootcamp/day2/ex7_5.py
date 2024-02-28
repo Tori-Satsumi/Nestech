@@ -20,16 +20,21 @@ def solve(*args, **kwargs):
 
     # for os.py is in "/home/codespace/.python/current/lib/python3.10", we will start there
     # Đường dẫn tới code của module `os`
-    lst_att = []
-    for root, dirs, files in os.walk("/home/codespace/.python/current/lib/python3.10"):
-        for file in files:
-            try:
-                name, ext = file.rsplit(".", 1)
-            except:
-                continue
+    # lst_att = []
+    # for root, dirs, files in os.walk("/home/codespace/.python/current/lib/python3.10"):
+    #     for file in files:
+    #         try:
+    #             name, ext = file.rsplit(".", 1)
+    #         except:
+    #             continue
 
-            if name == "os" and ext == "py":
-                ...
+    #         if name == "os" and ext == "py":
+    #             ...
+
+    with os.scandir() as dir_entries:
+        for entry in dir_entries:
+            info = entry.stat()
+            print(info.st_mtime)
 
     return None
 

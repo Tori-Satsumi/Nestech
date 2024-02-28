@@ -20,6 +20,7 @@ def solve(*args, **kwargs):
 
     # for os.py is in home folder, we will start there
     # Đường dẫn tới code của module `os`
+    lst_att = []
     for root, dirs, files in os.walk("/home"):
         for file in files:
             try:

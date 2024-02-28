@@ -43,12 +43,7 @@ def country_ranks(xmldata):
     # root = tree.getroot()
 
     root = ET.fromstring(xmldata)
-    lst = []
-    for child in root:
-        lst.append((child.attrib["name"], child[0].text))
-
-    print(lst)
-    return None
+    return [(child.attrib["name"], item.text) for child in root for item in child if item.tag == "rank"]
 
 
 def solve(input_data):

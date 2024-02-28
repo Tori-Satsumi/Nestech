@@ -10,6 +10,7 @@ secret https://docs.python.org/3.7/library/secrets.html
 
 import random  # NOQA
 import string  # NOQA
+import secrets
 
 full_list = string.ascii_letters + string.punctuation + string.digits
 

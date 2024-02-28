@@ -29,3 +29,6 @@ def generate_and_append(length, passwords=[]):
     password vừa tạo ra.
     Sửa argument tùy ý.
     """
+
+def main():
+    print(generate_and_append())

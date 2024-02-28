@@ -21,7 +21,6 @@ def solve() -> str:
 
     Dùng thư viện có sẵn sqlite3 giải bài này.
     """
-    result = None
     db_file = "sql-murder-mystery.db"
 
     def create_connection(db_file):
@@ -48,9 +47,7 @@ def solve() -> str:
     
     create_connection(db_file)
 
-
-
-    return result
+    return None
 
 
 def main():

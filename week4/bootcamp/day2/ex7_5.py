@@ -34,7 +34,10 @@ def solve(*args, **kwargs):
         if path:
             break
 
-    print(path)
+    os_att = dir(os)
+    sys_att = dir(sys)
+
+    os_file_len = 0
 
     return None
 

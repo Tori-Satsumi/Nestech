@@ -19,9 +19,9 @@ def solve(*args, **kwargs):
     """
 
     # Đường dẫn tới code của module `os`
-    for root, dirs, files in os.walk("."):
+    for root, dirs, files in os.walk("/home"):
         print(root, dirs, files)
-
+        
     return None
 
 

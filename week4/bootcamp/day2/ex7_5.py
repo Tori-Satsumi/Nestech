@@ -18,9 +18,17 @@ def solve(*args, **kwargs):
     Out[12]: 284
     """
 
+    # for os.py is in home folder, we will start there
     # Đường dẫn tới code của module `os`
-    for root, dirs, files in os.walk("/"):
-        print(root)
+    for root, dirs, files in os.walk("/home"):
+        for file in files:
+            try:
+                name, ext = file.rsplit(".", 1)
+            except:
+                continue
+
+            if name == "os" and ext == "py":
+                ...
 
     return None
 

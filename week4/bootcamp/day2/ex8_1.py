@@ -29,11 +29,10 @@ def your_function(N: int) -> Tuple[List[str], float]:
 
     :rtype tuple:
     """
-    
     start = time.time()
     ls_time = []
     for _ in range(N):
-        ls_time.append(datetime.datetime.now().time())
+        ls_time.append(str(datetime.datetime.now().time()))
         time.sleep(1)
 
     return (ls_time, time.time() - start)

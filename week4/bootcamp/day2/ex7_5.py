@@ -18,18 +18,23 @@ def solve(*args, **kwargs):
     Out[12]: 284
     """
 
-    # for os.py is in "/home/codespace/.python/current/lib/python3.10", we will start there
+    """
+    hint: os.py is in:
+    /home/codespace/.python/current/lib/python3.10
+    or 
+    /usr/local/python/3.9.18/lib/python3.9
+    """    
     # Đường dẫn tới code của module `os`
-    lst_att = []
-    for root, dirs, files in os.walk("/home/codespace/.python/current/lib/python3.10"):
+    path = ()
+    for root, dirs, files in os.walk("/"):
         for file in files:
-            try:
-                name, ext = file.rsplit(".", 1)
-            except:
-                continue
+            if file == "os.py":
+                path = root
+                break
+        if path:
+            break
 
-            if name == "os" and ext == "py":
-                ...
+    print(path)
 
     return None
 

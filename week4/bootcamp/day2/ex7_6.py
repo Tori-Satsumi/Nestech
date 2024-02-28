@@ -17,7 +17,10 @@ def rand_pass(length=16):
     mật khẩu này bắt buộc phải chứa ít nhất 1 chữ thường,
     1 chữ hoa, 1 số, 1 ký tự punctuation (string.punctuation).
     """
-    cont = [ascii_lowercase, ascii_uppercase, punctuation, digits]
+    if length < 4:
+        raise Exception("Can not generate pass with less than 4 letters")
+
+    cont = (ascii_lowercase, ascii_uppercase, punctuation, digits)
     while True:
         pasw = ""
         chk = {}
@@ -37,7 +40,7 @@ def generate_and_append():
     password vừa tạo ra.
     Sửa argument tùy ý.
     """
-    return [rand_pass for _ in random.randrange(0, )]
+    return [rand_pass(random.randrange(4, 10)) for _ in range(random.randrange(0, 10))]
 
 def main():
     print(generate_and_append())

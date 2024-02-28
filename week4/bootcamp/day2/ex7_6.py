@@ -30,14 +30,14 @@ def rand_pass(length=16):
             return pasw
 
 
-def generate_and_append(*arg):
+def generate_and_append(*args):
     """
     Sinh password ngẫu nhiên và append vào list passwords.
     Nếu không có list nào được gọi với function, trả về list chứa một
     password vừa tạo ra.
     Sửa argument tùy ý.
     """
-
+    
 
 def main():
     print(generate_and_append())

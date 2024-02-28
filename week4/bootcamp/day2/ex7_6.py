@@ -9,17 +9,20 @@ secret https://docs.python.org/3.7/library/secrets.html
 """
 
 import random  # NOQA
-import string  # NOQA
+from string import ascii_letters, punctuation, digits # NOQA
 import secrets
-
-full_list = string.ascii_letters + string.punctuation + string.digits
 
 def your_function(length=16):
     """Tạo một mật khẩu ngẫu nhiên (random password),
     mật khẩu này bắt buộc phải chứa ít nhất 1 chữ thường,
     1 chữ hoa, 1 số, 1 ký tự punctuation (string.punctuation).
     """
+    pasw = ""
+    cont = [ascii_letters, punctuation, digits]
 
+    while True:
+        while len(pasw) < length:
+            pasw += cont[secrets.randbelow(len(cont))]
 
 
 def generate_and_append(length, passwords=[]):
@@ -29,6 +32,3 @@ def generate_and_append(length, passwords=[]):
     password vừa tạo ra.
     Sửa argument tùy ý.
     """
-
-def main():
-    print(generate_and_append())

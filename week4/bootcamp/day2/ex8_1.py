@@ -29,6 +29,8 @@ def your_function(N: int) -> Tuple[List[str], float]:
 
     :rtype tuple:
     """
+    vinm = datetime.timezone()
+
     # start = time.time()
     # ls_time = []
     # for _ in range(N):

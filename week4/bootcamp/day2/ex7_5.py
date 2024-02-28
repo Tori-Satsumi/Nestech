@@ -18,10 +18,10 @@ def solve(*args, **kwargs):
     Out[12]: 284
     """
 
-    # for os.py is in home folder, we will start there
+    # for os.py is in "/home/codespace/.python/current/lib/python3.10", we will start there
     # Đường dẫn tới code của module `os`
     lst_att = []
-    for root, dirs, files in os.walk("/home"):
+    for root, dirs, files in os.walk("/home/codespace/.python/current/lib/python3.10"):
         for file in files:
             try:
                 name, ext = file.rsplit(".", 1)

@@ -23,6 +23,7 @@ Use ``sys.argv``
 import logging
 import sys
 from typing import List
+import configparser
 
 logger = logging.getLogger(__name__)
 file_path = 'ex8_2.txt'

@@ -33,7 +33,7 @@ def your_function(N: int) -> Tuple[List[str], float]:
     # ls_time = []
     # for _ in range(N):
     #     ls_time.append(time.time())
-    print(datetime.datetime.now())
+    print(datetime.datetime.now().time())
 
     return None
 
@@ -58,5 +58,5 @@ def main() -> None:
 # python filename.py
 # và có giá trị là tên file (bỏ .py) khi được import.
 if __name__ == "__main__":
-    print(__name__)
+    # print(__name__)
     main()

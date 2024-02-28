@@ -20,32 +20,20 @@ def rand_pass(length=16):
     if length < 4:
         raise Exception("Can not generate pass with less than 4 letters")
 
+    # requirements
     cont = (ascii_lowercase, ascii_uppercase, punctuation, digits)
-    # while True:
-    #     pasw = ""
-    #     chk = {}
-    #     while len(pasw) < length:
-    #         _i = secrets.randbelow(len(cont))
-    #         chk[str(_i)] = True
-    #         pasw += secrets.choice(cont[_i])
-        
-    #     if len(chk) == len(cont):
-    #         return pasw
-
+    
+    # messy password gen
     while True:
         pasw = ""
         chk = {}
         while len(pasw) < length:
-            chnc = secrets.randbelow(100)
-            if chnc < 10:
-                pasw += secrets.choice(punctuation)
-            elif chnc < 30:
-                pasw += secrets.choice(digits)
-            elif chnc < 70:
-                pasw += secrets.choice(ascii_uppercase)
-            else:
-                pasw += secrets.choice(ascii_lowercase)
-
+            _i = secrets.randbelow(len(cont))
+            chk[str(_i)] = True
+            pasw += secrets.choice(cont[_i])
+        
+        if len(chk) == len(cont):
+            return pasw
 
 def generate_and_append():
     """

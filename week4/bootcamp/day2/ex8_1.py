@@ -29,13 +29,13 @@ def your_function(N: int) -> Tuple[List[str], float]:
 
     :rtype tuple:
     """
-    vinm = datetime.timezone('Asias/VietNam')
+    vinm = datetime.timezone('Asia/VietNam')
 
     # start = time.time()
     # ls_time = []
     # for _ in range(N):
     #     ls_time.append(time.time())
-    print(datetime.datetime.now().time())
+    print(datetime.datetime.now(vinm))
 
     return None
 

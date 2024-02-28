@@ -38,8 +38,11 @@ def country_ranks(xmldata):
 
     Trả về list các tuple (tên quốc gia, thứ hạng)
     """
-    tree = ET.parse(xmldata)
-    root = tree.getroot()
+    
+    # tree = ET.parse("country_data.xml")
+    # root = tree.getroot()
+
+    root = ET.fromstring(xmldata)
     for child in root:
         print(child.tag, child.attrib)
 

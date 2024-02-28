@@ -12,14 +12,14 @@ import random  # NOQA
 from string import ascii_lowercase, ascii_uppercase, punctuation, digits # NOQA
 import secrets
 
-def your_function(length=16):
+def rand_pass(length=16):
     """Tạo một mật khẩu ngẫu nhiên (random password),
     mật khẩu này bắt buộc phải chứa ít nhất 1 chữ thường,
     1 chữ hoa, 1 số, 1 ký tự punctuation (string.punctuation).
     """
-    pasw = ""
     cont = [ascii_lowercase, ascii_uppercase, punctuation, digits]
     while True:
+        pasw = ""
         chk = {}
         while len(pasw) < length:
             _i = secrets.randbelow(len(cont))
@@ -27,14 +27,20 @@ def your_function(length=16):
             pasw += cont[_i]
         
         if len(chk) == len(cont):
-            break
+            return pasw
 
-    return pasw
 
-def generate_and_append(length, passwords=[]):
+def generate_and_append(*arg):
     """
     Sinh password ngẫu nhiên và append vào list passwords.
     Nếu không có list nào được gọi với function, trả về list chứa một
     password vừa tạo ra.
     Sửa argument tùy ý.
     """
+
+
+def main():
+    print(generate_and_append())
+
+if __name__ == "__main__":
+    main()

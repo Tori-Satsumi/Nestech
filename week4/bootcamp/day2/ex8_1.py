@@ -29,9 +29,13 @@ def your_function(N: int) -> Tuple[List[str], float]:
 
     :rtype tuple:
     """
-    result = None
+    start = time.time()
+    ls_time = []
+    for _ in range(N):
+        ls_time.append(time.time())
 
-    return result
+
+    return None
 
 
 def solve(N: int) -> Tuple:

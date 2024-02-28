@@ -118,7 +118,10 @@ def solve(input_data):
 
 def main():
     # path = PATH  # thư mục hiện tại
-    path = '/'
+    path = '.'
+    
+    # the core dir link, use this and ur code will go thru the entire laptop memory, gonna take a few mins - hours to complete
+    # path = '\' 
 
     # sử dụng `sys.argv` hoặc `argparse` để gán gía trị yêu cầu vào biến `path`
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp

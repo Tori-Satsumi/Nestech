@@ -25,8 +25,6 @@ def solve(*args, **kwargs):
     /usr/local/python/3.9.18/lib/python3.9
     """    
     # Đường dẫn tới code của module `os`
-    result = ()
-
     path = ""
     for root, dirs, files in os.walk("/"):
         for file in files:
@@ -36,15 +34,11 @@ def solve(*args, **kwargs):
         if path:
             break
 
-    os_att = dir(os)
-    sys_att = dir(sys)
-
     os_file_len = 0
     with open(f"{path}/os.py", "r") as os_file:
         os_file_len = len(list(os_file))
 
-    return None
-
+    return (path, [dir(os), dir(sys)], os_file_len)
 
 def main():
     print(solve())

@@ -33,12 +33,10 @@ def your_function(N: int) -> Tuple[List[str], float]:
     start = time.time()
     ls_time = []
     for _ in range(N):
-        ls_time.append(time.time())
+        ls_time.append(datetime.datetime.now().time())
         time.sleep(1)
 
-    print(ls_time)
-
-    return None
+    return (ls_time, time.time() - start)
 
 
 def solve(N: int) -> Tuple:

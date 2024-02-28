@@ -9,7 +9,7 @@ secret https://docs.python.org/3.7/library/secrets.html
 """
 
 import random  # NOQA
-from string import ascii_letters, punctuation, digits # NOQA
+from string import ascii_lowercase, ascii_uppercase, punctuation, digits # NOQA
 import secrets
 
 def your_function(length=16):
@@ -18,12 +18,18 @@ def your_function(length=16):
     1 chữ hoa, 1 số, 1 ký tự punctuation (string.punctuation).
     """
     pasw = ""
-    cont = [ascii_letters, punctuation, digits]
-
+    cont = [ascii_lowercase, ascii_uppercase, punctuation, digits]
     while True:
+        chk = {}
         while len(pasw) < length:
-            pasw += cont[secrets.randbelow(len(cont))]
+            _i = secrets.randbelow(len(cont))
+            chk[str(_i)] = None
+            pasw += cont[_i]
+        
+        if len(chk) == len(cont):
+            break
 
+    return pasw
 
 def generate_and_append(length, passwords=[]):
     """

@@ -1,12 +1,3 @@
-def main():
-    n = int(input("what's n? "))
-    for x in sheep(n):
-        print(x)
-
-
-def sheep(n):
-    for i in range(n):
-        yield "🍊" * i
-
-if __name__ == "__main__":
-    main()
+with open("ex9_2.txt", "w") as f:
+    for i in range(1000):
+        f.append(f"{i}\n")

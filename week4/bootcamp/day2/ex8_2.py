@@ -37,9 +37,10 @@ def your_function(option: str, n: int, file_path: str) -> List[str]:
     :param file_path: đường dẫn tới file
     :rtype list:
     """
-    result = None
+    
 
-    return result
+
+    return None
 
 
 def solve(option, file_path):

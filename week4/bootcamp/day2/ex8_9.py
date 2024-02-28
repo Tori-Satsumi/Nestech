@@ -60,7 +60,12 @@ def your_function(path) -> Dict[str, int]:
     module_name = {}
     for root, dirs, files in os.walk(path):
         for name in files:
-            nm, ext = name.rsplit(".", 1)
+            try:
+                nm, ext = name.rsplit(".", 1)
+            except:
+                result[name] = 0
+                continue
+
             try:
                 with open(name, "r") as fle:
                     ln = len(list(fle))

@@ -42,8 +42,7 @@ def solve() -> str:
         for row in rows:
             print(row)
 
-
-        return conn
+        conn.close()
     
     create_connection(db_file)
 

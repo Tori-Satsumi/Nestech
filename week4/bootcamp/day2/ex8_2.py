@@ -41,9 +41,9 @@ def your_function(option: str, n: int, file_path: str) -> List[str]:
     config.read(file_path)
     file_req = config.get('text_file_required', 'file1')
     with open(file_req, "r") as f:
-        print(len(list(f)))
+        file = list(f)
+        return file[:10] if option == "-h" else file[-10:]
 
-    return None
 
 
 def solve(option, file_path):

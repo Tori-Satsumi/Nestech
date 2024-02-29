@@ -18,6 +18,7 @@ def change(iterable: List) -> List[str]:
     :rtype list:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
+    print(len(iterable))
     return iterable[0].upper() if len(iterable) == 1 else iterable[0].upper(), change(iterable[1:]) 
 
 

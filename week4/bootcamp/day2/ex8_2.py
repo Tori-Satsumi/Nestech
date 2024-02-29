@@ -62,8 +62,8 @@ def solve(option, file_path):
     # key max-line-length
     import os
 
-    with open(os.path.join(os.path.dirname(__file__), "../setup.cfg")) as f:
-        print(f.read())
+    # with open(os.path.join(os.path.dirname(__file__), "../setup.cfg")) as f:
+    #     print(f.read())
     # Sử dụng thư viện có sẵn configparser
     # https://docs.python.org/3.6/library/configparser.html
     # để đọc file config này,

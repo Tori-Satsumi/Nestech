@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 from datetime import datetime, date
 import math
-import re
 __doc__ = """
 Viết script get_version nhận vào ngày ở format <month>/<day>/<year>.
 VD: 03/28/16 làm parameter và in ra một version được tính theo quy luật sau:
@@ -22,6 +21,14 @@ https://pymotw.com/3/argparse/index.html
 
 # logger = logging.getLogger(__name__)
 
+def validate(date_text):
+    try:
+        if date_text != datetime.strptime(date_text, r"%m/%d/%Y").strftime(r'%m/%d/%Y'):
+            raise ValueError
+        return True
+    except ValueError:
+        return False
+
 
 def get_version(input_data: str) -> str:
     """Trả về tên phiên bản như yêu cầu tại ``__doc__``
@@ -31,10 +38,12 @@ def get_version(input_data: str) -> str:
     :rtype str:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
-
-    result = None
-
-    return result
+    print(input_data)
+    if validate(input_data):
+        m, d, y = input_data.split("/")
+        print(m, d, y)
+    else:
+        raise ValueError("Invalid date")
 
 
 def solve(input_data):

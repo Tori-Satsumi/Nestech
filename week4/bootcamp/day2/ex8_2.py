@@ -94,7 +94,7 @@ def main():
         file_path = sys.argv[0]
     except:
         option = "-h"
-        file_path = "/config_file.ini"
+        file_path = "config_file.ini"
 
     lines = solve(option, file_path)
     for line in lines:

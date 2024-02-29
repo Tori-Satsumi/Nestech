@@ -2,7 +2,7 @@
 
 
 from typing import List
-
+import string
 
 data = ["nhung", "bong", "hoa", "nho", "va", "nhung", "bong", "hoa", "to"]
 
@@ -18,11 +18,7 @@ def change(iterable: List) -> List[str]:
     :rtype list:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
-    print(len(iterable))
-    if len(iterable) == 1:
-        return iterable[0].upper()
-    else:
-        return iterable[0].upper(), change(iterable[1:]) 
+    return map(string.upper(), )
 
 def solve(input_data):
     # function `solve` dành cho mục đích `test`, không cần sửa

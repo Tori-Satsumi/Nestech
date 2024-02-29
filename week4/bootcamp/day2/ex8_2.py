@@ -41,7 +41,7 @@ def your_function(option: str, n: int, file_path: str) -> List[str]:
     config.read(file_path)
     file_req = config.get('text_file_required', 'file1')
     with open(file_req, "r") as f:
-        print(f.read())
+        print(len(f.read()))
 
     return None
 

@@ -40,7 +40,12 @@ def get_version(input_data: str) -> str:
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
     if validate(input_data):
         m, d, y = input_data.split("/")
-        
+
+        starting = datetime(2016, 2, 9)
+        current = datetime(int(f"20{y}"), int(m), int(d))
+        gap = (starting - current).date()
+
+        print(gap)
 
     else:
         raise ValueError("Invalid date")

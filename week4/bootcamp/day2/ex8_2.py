@@ -37,6 +37,8 @@ def your_function(option: str, n: int, file_path: str) -> List[str]:
     :param file_path: đường dẫn tới file
     :rtype list:
     """
+    config = configparser.ConfigParser()
+    config.read(file_path)
     
 
 

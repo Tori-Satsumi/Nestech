@@ -19,8 +19,10 @@ def change(iterable: List) -> List[str]:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
     print(len(iterable))
-    return iterable[0].upper() if len(iterable) == 1 else iterable[0].upper(), change(iterable[1:]) 
-
+    if len(iterable) == 1:
+        return iterable[0].upper()
+    else:
+        return iterable[0].upper(), change(iterable[1:]) 
 
 def solve(input_data):
     # function `solve` dành cho mục đích `test`, không cần sửa

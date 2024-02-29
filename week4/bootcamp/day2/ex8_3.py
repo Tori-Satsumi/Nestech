@@ -7,7 +7,7 @@ from typing import List
 data = ["nhung", "bong", "hoa", "nho", "va", "nhung", "bong", "hoa", "to"]
 
 
-def your_function(iterable: List) -> List[str]:
+def change(iterable: List) -> List[str]:
     """Trả về list chứa các phần tử của iterable đã chuyển thành chữ HOA
     Không dùng list comprehension, for.
 

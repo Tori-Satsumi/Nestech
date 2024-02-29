@@ -18,17 +18,13 @@ def change(iterable: List) -> List[str]:
     :rtype list:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
-    result = None
-
-    return result
+    return iterable[0].upper() if len(iterable) == 1 else iterable[0].upper(), change(iterable[1:]) 
 
 
 def solve(input_data):
     # function `solve` dành cho mục đích `test`, không cần sửa
     # Gía trị trả về của `solve` và `your_function` là như nhau
-    result = your_function(input_data)
-
-    return result
+    return change(input_data)
 
 
 def main():

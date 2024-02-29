@@ -42,7 +42,7 @@ def your_function(option: str, n: int, file_path: str) -> List[str]:
     file_req = config.get('text_file_required', 'file1')
     with open(file_req, "r") as f:
         file = list(f)
-        return file[:10] if option == "-h" else file[-10:]
+        return file[:10] if option == "-h" else file[-10:] if option == "-t" else file
 
 
 

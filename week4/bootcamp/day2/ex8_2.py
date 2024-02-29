@@ -91,7 +91,7 @@ def main():
     # raise NotImplementedError("chưa xử lí `argument`")
     try:
         option = sys.argv[1]
-        file_path = sys.argv[0]
+        file_path = sys.argv[2]
     except:
         option = "-h"
         file_path = "config_file.ini"

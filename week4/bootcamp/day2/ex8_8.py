@@ -38,12 +38,12 @@ def get_version(input_data: str) -> str:
     :rtype str:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
-    print(input_data)
-    if validate(input_data):
-        m, d, y = input_data.split("/")
-        print(m, d, y)
-    else:
-        raise ValueError("Invalid date")
+    print(datetime.strptime(input_data, '%m/%d/%Y'))
+    # if validate(input_data):
+    #     m, d, y = input_data.split("/")
+    #     print(m, d, y)
+    # else:
+    #     raise ValueError("Invalid date")
 
 
 def solve(input_data):

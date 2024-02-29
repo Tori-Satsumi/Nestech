@@ -86,9 +86,13 @@ def main():
     # Gợi ý: sử dụng sys.argv
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
     # raise NotImplementedError("chưa xử lí `argument`")
-    option = sys.argv[1]
-    file_path = sys.argv[0]
-    
+    try:
+        option = sys.argv[1]
+        file_path = sys.argv[0]
+    except:
+        option = "-h"
+        file_path = "/event.json"
+
     lines = solve(option, file_path)
     for line in lines:
         line = line.rstrip()

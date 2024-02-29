@@ -2,7 +2,6 @@
 
 
 from typing import List
-import string
 
 data = ["nhung", "bong", "hoa", "nho", "va", "nhung", "bong", "hoa", "to"]
 
@@ -18,7 +17,7 @@ def change(iterable: List) -> List[str]:
     :rtype list:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
-    return map(string.upper(), )
+    return list(map(str.upper, iterable))
 
 def solve(input_data):
     # function `solve` dành cho mục đích `test`, không cần sửa

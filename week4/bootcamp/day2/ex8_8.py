@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 from datetime import datetime, date
 import math
+import re
 __doc__ = """
 Viết script get_version nhận vào ngày ở format <month>/<day>/<year>.
 VD: 03/28/16 làm parameter và in ra một version được tính theo quy luật sau:
@@ -17,12 +18,12 @@ Gợi ý: sử dụng `sys.argv` hoặc module `argparse`
 https://pymotw.com/3/argparse/index.html
 """
 
-import logging
+# import logging
 
-logger = logging.getLogger(__name__)
+# logger = logging.getLogger(__name__)
 
 
-def your_function(input_data: str) -> str:
+def get_version(input_data: str) -> str:
     """Trả về tên phiên bản như yêu cầu tại ``__doc__``
 
     :param input_data: ngày format ở dạng <month>/<day>/<year>,
@@ -45,7 +46,7 @@ def solve(input_data):
 
     :rtype str:
     """
-    result = your_function(input_data)
+    result = get_version(input_data)
     # Xoá dòng sau và viết code vào đây set các giá trị phù hợp
     # raise NotImplementedError("Bạn chưa làm bài này")
     return result

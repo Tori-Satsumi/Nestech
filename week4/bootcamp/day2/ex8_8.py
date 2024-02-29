@@ -23,7 +23,7 @@ https://pymotw.com/3/argparse/index.html
 
 def validate(date_text):
     try:
-        if date_text != datetime.strptime(date_text, r"%m/%d/%Y").strftime(r'%m/%d/%Y'):
+        if date_text != datetime.strptime(date_text, r"%m/%d/%y").strftime(r'%m/%d/%y'):
             raise ValueError
         return True
     except ValueError:
@@ -38,13 +38,11 @@ def get_version(input_data: str) -> str:
     :rtype str:
     """
     # Sửa tên và function cho phù hợp, trả về kết quả yêu cầu.
-    print(input_data)
-    # print(datetime.strptime(input_data, '%m/%d/%Y'))
-    # if validate(input_data):
-    #     m, d, y = input_data.split("/")
-    #     print(m, d, y)
-    # else:
-    #     raise ValueError("Invalid date")
+    if validate(input_data):
+        m, d, y = input_data.split("/")
+        print(m, d, y)
+    else:
+        raise ValueError("Invalid date")
 
 
 def solve(input_data):

@@ -15,9 +15,7 @@ https://pymotw.com/3/unittest/index.html#module-unittest
 
 
 def factorial(n: int) -> int:
-    if n <= 0:
-        return 1
-    return n * factorial(n - 1)
+    return 1 if n <= 0 else n * factorial(n - 1)
 
 
 class TestFactorial(unittest.TestCase):
@@ -40,7 +38,7 @@ def solve() -> bool:
     _, fn = tempfile.mkstemp()
     with open(fn, "w") as tmpf:
         r = unittest.TextTestRunner(stream=tmpf, verbosity=2).run(suite)
-        print(dir(r))
+        # print(dir(r))
     return r.wasSuccessful()
 
 

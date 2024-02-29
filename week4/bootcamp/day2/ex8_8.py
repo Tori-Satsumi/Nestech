@@ -43,7 +43,7 @@ def get_version(input_data: str) -> str:
 
         starting = datetime(2016, 2, 9)
         current = datetime(int(f"20{y}"), int(m), int(d))
-        gap = (starting - current).date()
+        gap = (starting - current)
 
         print(gap)
 

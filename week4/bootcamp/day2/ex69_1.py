@@ -10,9 +10,7 @@ def solve(numbers):
     Out[2]: [2, 3, 4, 5, 6]
     """
 
-    result = None
-
-    return result
+    return list(map())
 
 
 def main():

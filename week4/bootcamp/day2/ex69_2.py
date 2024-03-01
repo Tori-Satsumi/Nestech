@@ -10,9 +10,7 @@ def solve(numbers):
     Out[5]: [1, 1, 1]
     """
 
-    result = None
-
-    return result
+    return list(filter(lambda x: not x % 3))
 
 
 def main():

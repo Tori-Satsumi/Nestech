@@ -1,7 +1,11 @@
 import mysql.connector
 from mysql.connector import errorcode
 
-mydb = mysql.connector.connect()
+mydb = mysql.connector.connect(
+    host = "localhost",
+    user = "tori",
+    passwd = "c2h8i0p2"
+)
 
 # try:
 #     ...
